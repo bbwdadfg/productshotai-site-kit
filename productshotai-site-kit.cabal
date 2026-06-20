@@ -11,6 +11,7 @@ author:             ProductShot AI
 maintainer:         support@productshotai.app
 category:           Web
 build-type:         Simple
+extra-doc-files:    CHANGELOG.md
 extra-source-files: README.md
 
 source-repository head

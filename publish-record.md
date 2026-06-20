@@ -2,7 +2,7 @@
 - Site: <https://productshotai.app>
 - Source repo: <https://github.com/bbwdadfg/productshotai-site-kit>
 - Started: 2026-06-20T04:30:00Z
-- Finished: 2026-06-20T10:42:07Z
+- Finished: 2026-06-20T11:10:23Z
 
 ## Summary
 
@@ -46,7 +46,7 @@
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| hackage | `blocked_credentials` | missing publish-package-backlinks/hackage-token and cabal unavailable |
+| hackage | `blocked_credentials` | missing publish-package-backlinks/hackage-token; cabal/ghc installed and local package checks passed |
 | terraform_registry | `skipped_not_applicable` | no infrastructure module value |
 | helm_artifact_hub | `skipped_not_applicable` | no Kubernetes chart value |
 | ansible_galaxy | `skipped_not_applicable` | no automation role value |
@@ -62,11 +62,12 @@
 - JSR, Packagist, and PAUSE tokens were pasted into chat for this run; revoke and replace them after this publishing pass.
 - CocoaPods token is stored as a GitHub Actions secret for this repository.
 - Homebrew test installation was uninstalled after verification.
+- Hackage local `dist-newstyle/` build output is ignored and not committed.
 
 ## Follow-Up Queue
 
 - chocolatey: Wait for moderation to leave Pending automated review (owner: platform)
 - wordpress_plugin_directory: Wait for WordPress Plugin Directory review email and SVN approval (owner: platform)
-- hackage: Install cabal and add publish-package-backlinks/hackage-token (owner: user)
+- hackage: Create or log into Hackage and provide an upload token for productshotai-site-kit (owner: user)
 - aur: Add /Users/baiwei/.ssh/id_ed25519.pub to an AUR account, then push packaging/aur (owner: user)
 - credentials: Revoke/recreate JSR, Packagist, and PAUSE tokens because they were pasted into chat for this run (owner: user)

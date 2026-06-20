@@ -19,8 +19,8 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T10:42:07Z",
-    "finished_at": "2026-06-20T10:42:07Z"
+    "run_finished_at": "2026-06-20T11:10:23Z",
+    "finished_at": "2026-06-20T11:10:23Z"
   },
   "platforms": [
     {
@@ -484,18 +484,24 @@
       "version": "0.1.0",
       "public_url": "https://hackage.haskell.org/package/productshotai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
+      "link_surfaces_verified": [
+        "homepage",
+        "repository",
+        "cabal_metadata"
+      ],
       "credential_status": "missing_keychain",
-      "blocked_reason": "missing publish-package-backlinks/hackage-token and cabal unavailable",
+      "blocked_reason": "missing publish-package-backlinks/hackage-token; cabal/ghc installed and local package checks passed",
       "verification": {
-        "method": "not_verified",
-        "result": "Hackage still blocked: missing publish-package-backlinks/hackage-token and cabal CLI unavailable",
-        "checked_at": "2026-06-20T06:09:44Z"
+        "method": "cabal_build_test_check_sdist",
+        "result": "cabal build all, cabal test all, cabal check, and cabal sdist passed; tarball generated at dist-newstyle/sdist/productshotai-site-kit-0.1.0.tar.gz",
+        "checked_at": "2026-06-20T11:10:23Z"
       },
       "cleanup": [
-        "temporary credential variables/configs cleared"
+        "dist-newstyle ignored as local build output"
       ],
-      "notes": []
+      "notes": [
+        "Needs Hackage account upload token before live cabal upload"
+      ]
     },
     {
       "platform": "chocolatey",
@@ -821,7 +827,7 @@
     },
     {
       "platform": "hackage",
-      "reason": "Install cabal and add publish-package-backlinks/hackage-token",
+      "reason": "Create or log into Hackage and provide an upload token for productshotai-site-kit",
       "owner": "user"
     },
     {

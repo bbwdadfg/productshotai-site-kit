@@ -12,7 +12,7 @@ pageUrl "" = base ++ "/"
 pageUrl "/" = base ++ "/"
 pageUrl path = base ++ clean ++ "/"
   where
-    withSlash = if head path == '/' then path else '/' : path
+    withSlash = ensureLeadingSlash path
     clean = reverse (dropWhile (== '/') (reverse withSlash))
 
 localizedUrl :: String -> String -> Either String String
@@ -24,7 +24,12 @@ localizedUrl locale _ = Left ("unsupported locale: " ++ locale)
 normalized :: String -> String
 normalized "" = ""
 normalized "/" = ""
-normalized path = if head path == '/' then path else '/' : path
+normalized path = ensureLeadingSlash path
+
+ensureLeadingSlash :: String -> String
+ensureLeadingSlash "" = "/"
+ensureLeadingSlash path@('/' : _) = path
+ensureLeadingSlash path = '/' : path
 
 homeUrl, workbenchUrl, pricingUrl, blogUrl, contactUrl, zhHomeUrl :: String
 homeUrl = pageUrl "/"
