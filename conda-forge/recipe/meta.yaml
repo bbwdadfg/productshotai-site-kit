@@ -6,7 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  path: ../..
+  url: https://github.com/bbwdadfg/productshotai-site-kit/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 9fc8b974735b95274943d537e3d569dfe42589a147852f9baa443a17b6b159e1
 
 build:
   noarch: python

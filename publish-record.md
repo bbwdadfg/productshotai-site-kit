@@ -2,17 +2,17 @@
 - Site: <https://productshotai.app>
 - Source repo: <https://github.com/bbwdadfg/productshotai-site-kit>
 - Started: 2026-06-20T04:30:00Z
-- Finished: 2026-06-20T14:23:55Z
+- Finished: 2026-06-20T15:27:21Z
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 1 |
-| dry_run_passed | 4 |
-| planned | 1 |
+| blocked_credentials | 2 |
+| blocked_oauth | 1 |
+| published | 1 |
 | skipped_policy | 2 |
-| submitted | 2 |
+| submitted | 4 |
 | verified | 21 |
 
 ## Verified Public Links
@@ -41,29 +41,34 @@
 | open_vsx | `productshotai-site-kit` | `0.1.0` | <https://open-vsx.org/extension/bbwdadfg/productshotai-site-kit> | Open VSX API verified productshotai-site-kit 0.1.0, homepage, repository, and downloadable VSIX Publisher identity is not Open VSX verified. |
 | homebrew | `productshotai-site-kit` | `0.1.1` | <https://github.com/bbwdadfg/homebrew-productshotai-site-kit> | Public tap verified; brew tap, brew trust --formula, brew install, CLI smoke test, and brew test passed |
 
+## Published But Not Fully Indexed
+
+| Platform | Package | Version | Public URL | Current State |
+| --- | --- | --- | --- | --- |
+| helm_artifact_hub | `productshotai-asset-gateway` | `0.1.0` | <https://bbwdadfg.github.io/productshotai-helm-charts/index.yaml> | Created public chart repo, enabled GitHub Pages, verified index.yaml returns productshotai-asset-gateway 0.1.0, and helm repo add/search works. |
+
 ## Submitted / Awaiting Review
 
 | Platform | Package | Version | Review URL | Current State |
 | --- | --- | --- | --- | --- |
 | chocolatey | `productshotai-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/productshotai-site-kit> | Chocolatey page shows Pending with ProductShot AI and homepage link |
 | wordpress_plugin_directory | `baiwei-content-links-productshot-ai` | `0.1.1` | <https://wordpress.org/plugins/baiwei-content-links-productshot-ai/> | Updated 0.1.1 zip accepted by WordPress upload form; Gmail reply sent requesting slug change to baiwei-content-links-productshot-ai |
+| conda_forge | `productshotai-site-kit` | `0.1.2` | <https://github.com/conda-forge/staged-recipes/pull/33803> | Opened conda-forge/staged-recipes PR #33803 for productshotai-site-kit 0.1.2; conda-forge linter/build checks are pending. |
+| cran | `productshotaiR` | `0.1.0` | <https://cran.r-project.org/submit.html> | CRAN submission form accepted productshotaiR 0.1.0 and sent maintainer confirmation email to baiwei.chu@gmail.com; submission is not complete until that email link is confirmed. |
 
 ## Dry-Run Passed / Prepared Locally
 
 | Platform | Status | Local Verification | Remaining External Step |
 | --- | --- | --- | --- |
-| terraform_registry | `dry_run_passed` | terraform fmt -check -recursive, terraform init -backend=false, and terraform validate passed for terraform/cloudflare-productshotai-assets | Terraform module fmt/init/validate passed locally; live listing still requires extracting to a public terraform-cloudflare-productshotai-assets repo, adding a semver tag, and connecting Terraform Registry. |
-| helm_artifact_hub | `dry_run_passed` | npm test --prefix docker/asset-gateway, helm lint, and helm template passed for productshotai-asset-gateway | Helm chart and Node asset gateway validated locally; live listing still requires publishing the container image, hosting a chart repository/index, and letting Artifact Hub index it. |
-| ansible_galaxy | `dry_run_passed` | ansible-galaxy collection build passed and the example workspace playbook passed against localhost in check mode | Ansible collection build and local check-mode playbook passed; live publishing still requires Galaxy namespace confirmation and an API token. |
-| cran | `dry_run_passed` | R CMD build and R CMD check --as-cran passed with 0 ERROR, 0 WARNING, and 2 NOTE (new submission and local HTML tidy version). | R package passes local R CMD check --as-cran with 0 ERROR and 0 WARNING; live CRAN submission has not been made. |
 
 ## Blocked Or Manual Steps
 
 | Platform | Status | Reason |
 | --- | --- | --- |
 | hackage | `skipped_policy` | abandoned: Hackage upload requires additional developer validation/approval for this package, so this platform will not be pursued |
+| terraform_registry | `blocked_oauth` | Public Terraform module repository and v0.1.0 tag are published; Terraform Registry still requires HashiCorp/Terraform Registry web login and GitHub OAuth connection. |
+| ansible_galaxy | `blocked_credentials` | Collection archive builds locally, but no Ansible Galaxy token is stored in Keychain service publish-package-backlinks/ansible-galaxy-token. |
 | aur | `blocked_credentials` | AUR SSH access denied; add local SSH public key to an AUR account before git push |
-| conda_forge | `planned` | Conda recipe and CLI workflow are prepared, but no conda-forge PR has been opened; rattler-build cannot parse the conda-build Jinja recipe, so conda-build or staged-recipes CI is still needed with a released source URL and sha256. |
 | flathub | `skipped_policy` | ordinary website helper is not a Flathub app |
 
 ## Credential Cleanup
@@ -81,8 +86,8 @@
 - wordpress_plugin_directory: Wait for WordPress Plugin Directory review response for baiwei-content-links-productshot-ai (owner: platform)
 - aur: Add /Users/baiwei/.ssh/id_ed25519.pub to an AUR account, then push packaging/aur (owner: user)
 - credentials: Revoke/recreate JSR, Packagist, and PAUSE tokens because they were pasted into chat for this run (owner: user)
-- terraform_registry: Extract module to bbwdadfg/terraform-cloudflare-productshotai-assets, tag v0.1.0, then connect the Terraform Registry module (owner: user)
-- helm_artifact_hub: Publish the asset-gateway image and chart repository, then request Artifact Hub indexing (owner: user)
-- ansible_galaxy: Confirm the baiwei Galaxy namespace and token, then publish the collection that already builds locally (owner: user)
-- conda_forge: Release source archive, convert recipe to URL+sha256, then open staged-recipes PR and let conda-forge CI or conda-build validate the Jinja meta.yaml recipe (owner: user)
-- cran: Submit productshotaiR only if you accept the CRAN review burden; local R CMD check --as-cran already passes with 0 ERROR, 0 WARNING, and 2 NOTE (owner: user)
+- terraform_registry: Log in to Terraform Registry/HashiCorp, connect GitHub repo bbwdadfg/terraform-cloudflare-productshotai-assets, and publish module version v0.1.0 (owner: user)
+- helm_artifact_hub: Log in to Artifact Hub and add Helm repository https://bbwdadfg.github.io/productshotai-helm-charts for indexing (owner: user)
+- ansible_galaxy: Create/confirm Ansible Galaxy namespace baiwei, store API token in Keychain service publish-package-backlinks/ansible-galaxy-token, then rerun collection publish (owner: user)
+- conda_forge: Wait for conda-forge/staged-recipes PR #33803 checks and reviewer feedback (owner: platform)
+- cran: Open the CRAN confirmation email sent to baiwei.chu@gmail.com and click the confirmation link so review can start (owner: user)
