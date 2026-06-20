@@ -19,7 +19,8 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T07:10:04Z"
+    "run_finished_at": "2026-06-20T10:42:07Z",
+    "finished_at": "2026-06-20T10:42:07Z"
   },
   "platforms": [
     {
@@ -48,7 +49,7 @@
     },
     {
       "platform": "pkg_go_dev",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "go_module",
       "automation_level": "automated_after_git_tag",
       "package": "github.com/bbwdadfg/productshotai-site-kit",
@@ -63,9 +64,9 @@
       "credential_status": "none",
       "blocked_reason": "",
       "verification": {
-        "method": "publish_api_accepted",
-        "result": "Go proxy resolved v0.1.0; pkg.go.dev page still indexing",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "public_page_verified",
+        "result": "pkg.go.dev page now returns 200 with ProductShot AI package description and version metadata",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [],
       "notes": [
@@ -103,7 +104,7 @@
     },
     {
       "platform": "crates_io_docs_rs",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "rust_crate",
       "automation_level": "automated_with_token",
       "package": "productshotai-site-kit",
@@ -118,9 +119,9 @@
       "credential_status": "local_cargo_token",
       "blocked_reason": "",
       "verification": {
-        "method": "publish_api_accepted",
-        "result": "crates.io API verified homepage and repository; docs.rs still 404/indexing",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "docs_page_verified",
+        "result": "docs.rs page now returns 200 for productshotai_site_kit 0.1.0 with ProductShot AI docs",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [],
       "notes": [
@@ -339,7 +340,7 @@
     },
     {
       "platform": "maven_central_javadoc",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "java_library",
       "automation_level": "semi_auto_signed",
       "package": "io.github.bbwdadfg:productshotai-site-kit",
@@ -354,9 +355,9 @@
       "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "publish_api_accepted",
-        "result": "Central bundle uploaded, validated, and publish API returned HTTP 204; Central status API returned 500 and repo1/search indexing not visible yet",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "repo1_and_javadoc_verified",
+        "result": "Repo1 POM and javadoc.io page now return 200 for io.github.bbwdadfg:productshotai-site-kit:0.1.0",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
@@ -448,7 +449,7 @@
     },
     {
       "platform": "cpan_metacpan",
-      "status": "published",
+      "status": "verified",
       "artifact_type": "perl_distribution",
       "automation_level": "automated_with_pause_account",
       "package": "ProductShotAI-SiteKit",
@@ -462,9 +463,9 @@
       "credential_status": "keychain_token_used",
       "blocked_reason": "",
       "verification": {
-        "method": "pause_api_upload_accepted",
-        "result": "PAUSE /api/upload returned Upload succeeded for ProductShotAI-SiteKit-0.1.0.tar.gz; CPAN and MetaCPAN indexing not visible yet",
-        "checked_at": "2026-06-20T07:10:04Z"
+        "method": "metacpan_page_verified",
+        "result": "MetaCPAN release page now returns 200 for ProductShotAI-SiteKit",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [
         "temporary credential variables cleared"
@@ -642,69 +643,80 @@
     },
     {
       "platform": "open_vsx",
-      "status": "blocked_credentials",
+      "status": "verified",
       "artifact_type": "vscode_compatible_extension",
       "automation_level": "semi_auto_review",
       "package": "productshotai-site-kit",
       "version": "0.1.0",
       "public_url": "https://open-vsx.org/extension/bbwdadfg/productshotai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "missing_keychain",
-      "blocked_reason": "missing publish-package-backlinks/openvsx-token",
+      "link_surfaces_verified": [
+        "homepage",
+        "repository",
+        "readme",
+        "package_metadata"
+      ],
+      "credential_status": "browser_oauth_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "dry_run_passed",
-        "result": "Open VSX extension artifact prepared in open-vsx/; tests passed and VSIX packaged with @vscode/vsce",
-        "checked_at": "2026-06-20T06:09:44Z"
+        "method": "open_vsx_api_verified",
+        "result": "Open VSX API verified productshotai-site-kit 0.1.0, homepage, repository, and downloadable VSIX",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
       "notes": [
-        "Needs Open VSX publisher namespace and publish-package-backlinks/openvsx-token before live ovsx publish"
+        "Published through Open VSX browser session after Eclipse ECA and Open VSX Publisher Agreement were completed"
       ]
     },
     {
       "platform": "wordpress_plugin_directory",
-      "status": "blocked_review",
+      "status": "submitted",
       "artifact_type": "wordpress_plugin",
       "automation_level": "manual_review",
-      "package": "productshotai-site-kit",
+      "package": "productshot-ai-site-kit",
       "version": "0.1.0",
-      "public_url": "https://wordpress.org/plugins/productshotai-site-kit/",
+      "public_url": "https://wordpress.org/plugins/productshot-ai-site-kit/",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
       "link_surfaces_verified": [],
       "credential_status": "none",
-      "blocked_reason": "WordPress.org login/review/SVN approval required",
+      "blocked_reason": "",
       "verification": {
-        "method": "artifact_prepared",
-        "result": "WordPress shortcode plugin prepared under wordpress/productshotai-site-kit and zipped at /tmp/productshotai-site-kit-wordpress.zip for review submission",
-        "checked_at": "2026-06-20T06:09:44Z"
+        "method": "wordpress_submission_accepted",
+        "result": "WordPress automated plugin scan passed and ProductShot AI Site Kit is Awaiting Review under slug productshot-ai-site-kit",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [],
       "notes": [
-        "Requires WordPress.org plugin review and SVN access after approval"
+        "Submitted on 2026-06-20; wait for WordPress Plugin Directory review email before SVN release"
       ]
     },
     {
       "platform": "aur",
-      "status": "skipped_policy",
-      "artifact_type": "arch_package",
+      "status": "blocked_credentials",
+      "artifact_type": "arch_pkgbuild",
       "automation_level": "manual_git_ssh",
       "package": "productshotai-site-kit",
-      "version": "0.1.0",
-      "public_url": "",
+      "version": "0.1.1",
+      "public_url": "https://aur.archlinux.org/packages/productshotai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "no real installable Arch utility",
+      "link_surfaces_verified": [
+        "PKGBUILD_url",
+        "PKGBUILD_pkgdesc"
+      ],
+      "credential_status": "missing_aur_ssh_key",
+      "blocked_reason": "AUR SSH access denied; add local SSH public key to an AUR account before git push",
       "verification": {
-        "method": "not_verified",
-        "result": "No real Arch CLI or desktop app; backlink-only OS package would be misleading",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "artifact_prepared_ssh_denied",
+        "result": "PKGBUILD and .SRCINFO generated for v0.1.1; aur@aur.archlinux.org returned Permission denied (publickey)",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "PKGBUILD and .SRCINFO prepared under packaging/aur/",
+        "macOS lacks makepkg, so full AUR build validation still needs an Arch environment"
+      ]
     },
     {
       "platform": "conda_forge",
@@ -768,39 +780,43 @@
     },
     {
       "platform": "homebrew",
-      "status": "skipped_policy",
-      "artifact_type": "formula_or_cask",
-      "automation_level": "pr_review",
+      "status": "verified",
+      "artifact_type": "homebrew_tap_formula",
+      "automation_level": "automated_github_tap",
       "package": "productshotai-site-kit",
-      "version": "0.1.0",
-      "public_url": "",
+      "version": "0.1.1",
+      "public_url": "https://github.com/bbwdadfg/homebrew-productshotai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "website helper only",
+      "link_surfaces_verified": [
+        "tap_readme",
+        "formula_homepage",
+        "formula_source"
+      ],
+      "credential_status": "github_cli_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "not_verified",
-        "result": "No real CLI/app artifact exists for Homebrew",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "homebrew_tap_install_test",
+        "result": "Public tap verified; brew tap, brew trust --formula, brew install, CLI smoke test, and brew test passed",
+        "checked_at": "2026-06-20T10:41:18Z"
       },
-      "cleanup": [],
-      "notes": []
+      "cleanup": [
+        "local Homebrew test install uninstalled after verification"
+      ],
+      "notes": [
+        "Homebrew/core was not submitted; public GitHub tap was published instead",
+        "Homebrew 6 requires brew trust --formula before installing third-party tap formulae"
+      ]
     }
   ],
   "follow_up": [
     {
-      "platform": "maven_central_javadoc",
-      "reason": "Retry Central status/repo1/search/javadoc verification after indexing; deployment publish API returned 204",
-      "owner": "agent_or_user"
-    },
-    {
-      "platform": "pkg_go_dev",
-      "reason": "Retry pkg.go.dev page after indexing; Go proxy already resolves v0.1.0",
-      "owner": "agent_or_user"
-    },
-    {
       "platform": "chocolatey",
-      "reason": "Wait for moderation to leave Pending",
+      "reason": "Wait for moderation to leave Pending automated review",
+      "owner": "platform"
+    },
+    {
+      "platform": "wordpress_plugin_directory",
+      "reason": "Wait for WordPress Plugin Directory review email and SVN approval",
       "owner": "platform"
     },
     {
@@ -809,19 +825,9 @@
       "owner": "user"
     },
     {
-      "platform": "open_vsx",
-      "reason": "Create/verify Open VSX publisher namespace bbwdadfg and add publish-package-backlinks/openvsx-token",
+      "platform": "aur",
+      "reason": "Add /Users/baiwei/.ssh/id_ed25519.pub to an AUR account, then push packaging/aur",
       "owner": "user"
-    },
-    {
-      "platform": "wordpress_plugin_directory",
-      "reason": "Submit /tmp/productshotai-site-kit-wordpress.zip in WordPress.org plugin review flow",
-      "owner": "user"
-    },
-    {
-      "platform": "cpan_metacpan",
-      "reason": "Retry CPAN author directory and MetaCPAN release verification after PAUSE indexing/mirroring catches up",
-      "owner": "agent_or_user"
     },
     {
       "platform": "credentials",

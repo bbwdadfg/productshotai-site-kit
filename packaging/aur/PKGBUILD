@@ -1,0 +1,18 @@
+# Maintainer: Baiwei Chu <baiwei.chu@gmail.com>
+pkgname=productshotai-site-kit
+pkgver=0.1.1
+pkgrel=1
+pkgdesc='ProductShot AI public URL helper CLI'
+arch=('any')
+url='https://productshotai.app'
+license=('MIT')
+depends=('sh')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/bbwdadfg/productshotai-site-kit/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('be3852270d29e0aeea849f4043be7ed5e00fa3fa6a1c3003c18875b6a16b4438')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  install -Dm755 bin/productshotai-site-kit "${pkgdir}/usr/bin/productshotai-site-kit"
+  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
+}

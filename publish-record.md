@@ -1,30 +1,27 @@
 # Publish Record: ProductShot AI
-
 - Site: <https://productshotai.app>
 - Source repo: <https://github.com/bbwdadfg/productshotai-site-kit>
 - Started: 2026-06-20T04:30:00Z
-- Finished: 2026-06-20T07:10:04Z
+- Finished: 2026-06-20T10:42:07Z
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
 | blocked_credentials | 2 |
-| blocked_review | 1 |
-| published | 4 |
 | skipped_not_applicable | 3 |
-| skipped_policy | 5 |
-| submitted | 1 |
-| verified | 15 |
+| skipped_policy | 3 |
+| submitted | 2 |
+| verified | 21 |
 
 ## Published Links
 
 | Platform | Package | Version | Public URL | Verification |
 | --- | --- | --- | --- | --- |
 | github | `bbwdadfg/productshotai-site-kit` | `v0.1.0` | <https://github.com/bbwdadfg/productshotai-site-kit> | public repo, homepage, and pushed tags verified |
-| pkg_go_dev | `github.com/bbwdadfg/productshotai-site-kit` | `v0.1.0` | <https://pkg.go.dev/github.com/bbwdadfg/productshotai-site-kit> | Go proxy resolved v0.1.0; pkg.go.dev page still indexing |
+| pkg_go_dev | `github.com/bbwdadfg/productshotai-site-kit` | `v0.1.0` | <https://pkg.go.dev/github.com/bbwdadfg/productshotai-site-kit> | pkg.go.dev page now returns 200 with ProductShot AI package description and version metadata |
 | packagist | `bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://packagist.org/packages/bbwdadfg/productshotai-site-kit> | Packagist create-package API returned success; P2 API verified v0.1.0 with homepage and source repository |
-| crates_io_docs_rs | `productshotai-site-kit` | `0.1.0` | <https://crates.io/crates/productshotai-site-kit> | crates.io API verified homepage and repository; docs.rs still 404/indexing |
+| crates_io_docs_rs | `productshotai-site-kit` | `0.1.0` | <https://crates.io/crates/productshotai-site-kit> | docs.rs page now returns 200 for productshotai_site_kit 0.1.0 with ProductShot AI docs |
 | rubygems | `productshotai-site-kit` | `0.1.0` | <https://rubygems.org/gems/productshotai-site-kit> | RubyGems API verified version, homepage, and source_code_uri |
 | npm | `productshotai-site-kit` | `0.1.0` | <https://www.npmjs.com/package/productshotai-site-kit> | npm registry JSON verified latest, homepage, and repository |
 | pypi | `productshotai-site-kit` | `0.1.0` | <https://pypi.org/project/productshotai-site-kit/> | PyPI JSON API verified version, homepage, and repository |
@@ -33,14 +30,17 @@
 | clojars | `io.github.bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://clojars.org/io.github.bbwdadfg/productshotai-site-kit> | Clojars repo POM verified homepage and SCM links |
 | docker_hub | `baiwei111/productshotai-site-kit` | `0.1.0` | <https://hub.docker.com/r/baiwei111/productshotai-site-kit> | Docker Registry manifest verified schemaVersion 2, config digest, and layer count |
 | jsr | `@bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://jsr.io/@bbwdadfg/productshotai-site-kit> | JSR publish succeeded; meta.json verified latest 0.1.0 for @bbwdadfg/productshotai-site-kit |
-| maven_central_javadoc | `io.github.bbwdadfg:productshotai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/productshotai-site-kit> | Central bundle uploaded, validated, and publish API returned HTTP 204; Central status API returned 500 and repo1/search indexing not visible yet |
+| maven_central_javadoc | `io.github.bbwdadfg:productshotai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/productshotai-site-kit> | Repo1 POM and javadoc.io page now return 200 for io.github.bbwdadfg:productshotai-site-kit:0.1.0 |
 | nuget | `ProductShotAI.SiteKit` | `0.1.0` | <https://www.nuget.org/packages/ProductShotAI.SiteKit/> | NuGet flat-container API verified version 0.1.0 |
 | cocoapods | `ProductShotAISiteKit` | `0.1.0` | <https://cocoapods.org/pods/ProductShotAISiteKit> | GitHub Actions run 27862372191 published ProductShotAISiteKit 0.1.0; pod trunk info and CocoaPods page verified homepage and GitHub links |
 | luarocks | `productshotai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/productshotai-site-kit> | LuaRocks module page verified version and homepage |
-| cpan_metacpan | `ProductShotAI-SiteKit` | `0.1.0` | <https://metacpan.org/release/ProductShotAI-SiteKit> | PAUSE /api/upload returned Upload succeeded for ProductShotAI-SiteKit-0.1.0.tar.gz; CPAN and MetaCPAN indexing not visible yet |
+| cpan_metacpan | `ProductShotAI-SiteKit` | `0.1.0` | <https://metacpan.org/release/ProductShotAI-SiteKit> | MetaCPAN release page now returns 200 for ProductShotAI-SiteKit |
 | chocolatey | `productshotai-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/productshotai-site-kit> | Chocolatey page shows Pending with ProductShot AI and homepage link |
 | github_packages | `@bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/productshotai-site-kit> | GitHub npm package verified via npm view against npm.pkg.github.com |
 | gitlab_packages | `productshotai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/productshotai-site-kit> | GitLab API verified generic package and public project |
+| open_vsx | `productshotai-site-kit` | `0.1.0` | <https://open-vsx.org/extension/bbwdadfg/productshotai-site-kit> | Open VSX API verified productshotai-site-kit 0.1.0, homepage, repository, and downloadable VSIX |
+| wordpress_plugin_directory | `productshot-ai-site-kit` | `0.1.0` | <https://wordpress.org/plugins/productshot-ai-site-kit/> | WordPress automated plugin scan passed and ProductShot AI Site Kit is Awaiting Review under slug productshot-ai-site-kit |
+| homebrew | `productshotai-site-kit` | `0.1.1` | <https://github.com/bbwdadfg/homebrew-productshotai-site-kit> | Public tap verified; brew tap, brew trust --formula, brew install, CLI smoke test, and brew test passed |
 
 ## Blocked Or Manual Steps
 
@@ -50,13 +50,10 @@
 | terraform_registry | `skipped_not_applicable` | no infrastructure module value |
 | helm_artifact_hub | `skipped_not_applicable` | no Kubernetes chart value |
 | ansible_galaxy | `skipped_not_applicable` | no automation role value |
-| open_vsx | `blocked_credentials` | missing publish-package-backlinks/openvsx-token |
-| wordpress_plugin_directory | `blocked_review` | WordPress.org login/review/SVN approval required |
-| aur | `skipped_policy` | no real installable Arch utility |
+| aur | `blocked_credentials` | AUR SSH access denied; add local SSH public key to an AUR account before git push |
 | conda_forge | `skipped_policy` | no scientific/Python conda value |
 | cran | `skipped_policy` | no CRAN-suitable R package |
 | flathub | `skipped_policy` | ordinary website helper is not a Flathub app |
-| homebrew | `skipped_policy` | website helper only |
 
 ## Credential Cleanup
 
@@ -64,14 +61,12 @@
 - Temporary npmrc, Maven settings, Docker workspace, GitLab upload archive, and generated package archives were deleted after use.
 - JSR, Packagist, and PAUSE tokens were pasted into chat for this run; revoke and replace them after this publishing pass.
 - CocoaPods token is stored as a GitHub Actions secret for this repository.
+- Homebrew test installation was uninstalled after verification.
 
 ## Follow-Up Queue
 
-- maven_central_javadoc: Retry Central status/repo1/search/javadoc verification after indexing; deployment publish API returned 204 (owner: agent_or_user)
-- pkg_go_dev: Retry pkg.go.dev page after indexing; Go proxy already resolves v0.1.0 (owner: agent_or_user)
-- chocolatey: Wait for moderation to leave Pending (owner: platform)
+- chocolatey: Wait for moderation to leave Pending automated review (owner: platform)
+- wordpress_plugin_directory: Wait for WordPress Plugin Directory review email and SVN approval (owner: platform)
 - hackage: Install cabal and add publish-package-backlinks/hackage-token (owner: user)
-- open_vsx: Create/verify Open VSX publisher namespace bbwdadfg and add publish-package-backlinks/openvsx-token (owner: user)
-- wordpress_plugin_directory: Submit /tmp/productshotai-site-kit-wordpress.zip in WordPress.org plugin review flow (owner: user)
-- cpan_metacpan: Retry CPAN author directory and MetaCPAN release verification after PAUSE indexing/mirroring catches up (owner: agent_or_user)
+- aur: Add /Users/baiwei/.ssh/id_ed25519.pub to an AUR account, then push packaging/aur (owner: user)
 - credentials: Revoke/recreate JSR, Packagist, and PAUSE tokens because they were pasted into chat for this run (owner: user)

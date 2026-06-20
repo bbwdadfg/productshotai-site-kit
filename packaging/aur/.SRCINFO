@@ -1,0 +1,12 @@
+pkgbase = productshotai-site-kit
+	pkgdesc = ProductShot AI public URL helper CLI
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://productshotai.app
+	arch = any
+	license = MIT
+	depends = sh
+	source = productshotai-site-kit-0.1.1.tar.gz::https://github.com/bbwdadfg/productshotai-site-kit/archive/refs/tags/v0.1.1.tar.gz
+	sha256sums = be3852270d29e0aeea849f4043be7ed5e00fa3fa6a1c3003c18875b6a16b4438
+
+pkgname = productshotai-site-kit
