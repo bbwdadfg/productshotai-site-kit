@@ -1,12 +1,13 @@
 <?php
 /**
  * Plugin Name: ProductShot AI Site Kit
- * Plugin URI: https://productshotai.app
+ * Plugin URI: https://github.com/bbwdadfg/productshotai-site-kit/tree/main/wordpress/productshotai-site-kit
  * Description: Shortcodes for linking WordPress content to ProductShot AI workbench and public pages.
  * Version: 0.1.0
  * Author: ProductShot AI
  * Author URI: https://productshotai.app
- * License: MIT
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 6.0
  * Requires PHP: 7.4
  *
