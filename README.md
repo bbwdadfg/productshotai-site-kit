@@ -36,6 +36,8 @@ Additional ecosystem manifests and helper sources are included for trial publish
 - LuaRocks: `productshotai-site-kit-0.1.0-1.rockspec`
 - Hackage: `productshotai-site-kit.cabal`
 - Chocolatey: `chocolatey/productshotai-site-kit.nuspec`
+- Open VSX: `open-vsx/`
+- WordPress Plugin Directory: `wordpress/productshotai-site-kit/`
 
 ## Usage
 

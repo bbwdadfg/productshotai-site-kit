@@ -1,4 +1,5 @@
 Makefile.PL
+MANIFEST
 lib/ProductShotAI/SiteKit.pm
 t/site_kit.t
 README.md

@@ -1,0 +1,35 @@
+name: Publish CocoaPods
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Git tag used by the podspec source"
+        required: true
+        default: "cocoapods-v0.1.0"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    env:
+      COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+    steps:
+      - name: Checkout pod source tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+
+      - name: Verify Xcode simulator tools
+        run: xcrun --find simctl
+
+      - name: Install CocoaPods
+        run: sudo gem install cocoapods --no-document
+
+      - name: Lint podspec
+        run: pod spec lint ProductShotAISiteKit.podspec --allow-warnings
+
+      - name: Publish to CocoaPods Trunk
+        run: pod trunk push ProductShotAISiteKit.podspec --allow-warnings

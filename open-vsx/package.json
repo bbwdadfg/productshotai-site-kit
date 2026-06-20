@@ -1,0 +1,55 @@
+{
+  "name": "productshotai-site-kit",
+  "displayName": "ProductShot AI Site Kit",
+  "description": "Open ProductShot AI workbench, blog, and public site links from VS Code.",
+  "version": "0.1.0",
+  "publisher": "bbwdadfg",
+  "license": "MIT",
+  "homepage": "https://productshotai.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbwdadfg/productshotai-site-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bbwdadfg/productshotai-site-kit/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "product-photography",
+    "ai-product-photography",
+    "productshot",
+    "ecommerce"
+  ],
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "activationEvents": [
+    "onCommand:productshotai.openWorkbench",
+    "onCommand:productshotai.openBlog",
+    "onCommand:productshotai.copySiteLinks"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "productshotai.openWorkbench",
+        "title": "ProductShot AI: Open Workbench"
+      },
+      {
+        "command": "productshotai.openBlog",
+        "title": "ProductShot AI: Open Blog"
+      },
+      {
+        "command": "productshotai.copySiteLinks",
+        "title": "ProductShot AI: Copy Site Links"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node test.js",
+    "package": "npx --yes @vscode/vsce package"
+  },
+  "devDependencies": {}
+}
