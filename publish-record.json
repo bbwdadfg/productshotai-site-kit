@@ -19,7 +19,7 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T06:09:44Z"
+    "run_finished_at": "2026-06-20T06:45:17Z"
   },
   "platforms": [
     {
@@ -82,17 +82,19 @@
       "public_url": "https://packagist.org/packages/bbwdadfg/productshotai-site-kit",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
       "link_surfaces_verified": [],
-      "credential_status": "missing_keychain",
-      "blocked_reason": "missing publish-package-backlinks/packagist-token",
+      "credential_status": "keychain_item_empty",
+      "blocked_reason": "publish-package-backlinks/packagist-token exists but contains an empty password value",
       "verification": {
-        "method": "not_verified",
-        "result": "Composer metadata exists, but Packagist submission still blocked by missing publish-package-backlinks/packagist-token",
-        "checked_at": "2026-06-20T06:09:44Z"
+        "method": "credential_probe",
+        "result": "Packagist Keychain item exists but security -w returned an empty value; live API publish not attempted",
+        "checked_at": "2026-06-20T06:45:17Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
-      "notes": []
+      "notes": [
+        "Re-store a non-empty Packagist token in the default account Keychain item"
+      ]
     },
     {
       "platform": "crates_io_docs_rs",
@@ -304,7 +306,7 @@
     },
     {
       "platform": "jsr",
-      "status": "blocked_credentials",
+      "status": "blocked_namespace",
       "artifact_type": "typescript_package",
       "automation_level": "automated_with_token",
       "package": "@bbwdadfg/productshotai-site-kit",
@@ -313,17 +315,17 @@
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
       "link_surfaces_verified": [],
       "credential_status": "keychain_token_exposed",
-      "blocked_reason": "JSR token exposed by CLI error output; do not reuse",
+      "blocked_reason": "JSR package does not exist yet and must be created on jsr.io before CLI publish; token was exposed by CLI failure output",
       "verification": {
-        "method": "dry_run_passed_credentials_blocked",
-        "result": "JSR dry-run passed with --allow-dirty; live publish still blocked until exposed token is revoked and replaced",
-        "checked_at": "2026-06-20T06:09:44Z"
+        "method": "publish_attempt_blocked",
+        "result": "JSR dry-run passed, but live publish requires creating @bbwdadfg/productshotai-site-kit at https://jsr.io/new?scope=bbwdadfg&package=productshotai-site-kit&from=cli; token must be revoked and replaced again",
+        "checked_at": "2026-06-20T06:45:17Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
       "notes": [
-        "Do not reuse the existing Keychain JSR token unless it has been revoked and replaced"
+        "Do not reuse the current JSR token; revoke it and create the package page before retrying"
       ]
     },
     {
@@ -446,17 +448,17 @@
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
       "link_surfaces_verified": [],
       "credential_status": "keychain_token_rejected",
-      "blocked_reason": "PAUSE user/token invalid or insufficient",
+      "blocked_reason": "PAUSE user/token rejected with 401 Unauthorized",
       "verification": {
-        "method": "dry_run_passed_upload_rejected",
-        "result": "CPAN tarball now builds cleanly after MANIFEST fix; PAUSE upload still returned 401 Unauthorized",
-        "checked_at": "2026-06-20T06:09:44Z"
+        "method": "upload_attempt_rejected",
+        "result": "CPAN tarball built cleanly, but cpan-upload to PAUSE returned 401 Unauthorized; browser login does not satisfy CLI upload auth",
+        "checked_at": "2026-06-20T06:45:17Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
       "notes": [
-        "MANIFEST now includes MANIFEST itself so MakeMaker can add META files during make dist"
+        "Generate a new PAUSE token from the logged-in PAUSE page and store it in publish-package-backlinks/cpan-token"
       ]
     },
     {
@@ -774,11 +776,6 @@
   ],
   "follow_up": [
     {
-      "platform": "jsr",
-      "reason": "Revoke exposed JSR token, create a fresh token, and store it in publish-package-backlinks/jsr-token",
-      "owner": "user"
-    },
-    {
       "platform": "maven_central_javadoc",
       "reason": "Retry Central status/repo1/search/javadoc verification after indexing; deployment publish API returned 204",
       "owner": "agent_or_user"
@@ -787,16 +784,6 @@
       "platform": "pkg_go_dev",
       "reason": "Retry pkg.go.dev page after indexing; Go proxy already resolves v0.1.0",
       "owner": "agent_or_user"
-    },
-    {
-      "platform": "cpan_metacpan",
-      "reason": "Replace PAUSE user/token; current Keychain credential still returns 401",
-      "owner": "user"
-    },
-    {
-      "platform": "packagist",
-      "reason": "Add Packagist API token or complete Packagist GitHub OAuth",
-      "owner": "user"
     },
     {
       "platform": "chocolatey",
@@ -816,6 +803,21 @@
     {
       "platform": "wordpress_plugin_directory",
       "reason": "Submit /tmp/productshotai-site-kit-wordpress.zip in WordPress.org plugin review flow",
+      "owner": "user"
+    },
+    {
+      "platform": "packagist",
+      "reason": "Re-store a non-empty Packagist token in publish-package-backlinks/packagist-token",
+      "owner": "user"
+    },
+    {
+      "platform": "jsr",
+      "reason": "Create the JSR package page, revoke the exposed token, then store a fresh publish token",
+      "owner": "user"
+    },
+    {
+      "platform": "cpan_metacpan",
+      "reason": "Generate a new PAUSE upload token from the logged-in PAUSE account and store it in publish-package-backlinks/cpan-token",
       "owner": "user"
     }
   ]

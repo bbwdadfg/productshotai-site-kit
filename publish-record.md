@@ -3,13 +3,14 @@
 - Site: <https://productshotai.app>
 - Source repo: <https://github.com/bbwdadfg/productshotai-site-kit>
 - Started: 2026-06-20T04:30:00Z
-- Finished: 2026-06-20T06:09:44Z
+- Finished: 2026-06-20T06:45:17Z
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 5 |
+| blocked_credentials | 4 |
+| blocked_namespace | 1 |
 | blocked_review | 1 |
 | published | 3 |
 | skipped_not_applicable | 3 |
@@ -43,9 +44,9 @@
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| packagist | `blocked_credentials` | missing publish-package-backlinks/packagist-token |
-| jsr | `blocked_credentials` | JSR token exposed by CLI error output; do not reuse |
-| cpan_metacpan | `blocked_credentials` | PAUSE user/token invalid or insufficient |
+| packagist | `blocked_credentials` | publish-package-backlinks/packagist-token exists but contains an empty password value |
+| jsr | `blocked_namespace` | JSR package does not exist yet and must be created on jsr.io before CLI publish; token was exposed by CLI failure output |
+| cpan_metacpan | `blocked_credentials` | PAUSE user/token rejected with 401 Unauthorized |
 | hackage | `blocked_credentials` | missing publish-package-backlinks/hackage-token and cabal unavailable |
 | terraform_registry | `skipped_not_applicable` | no infrastructure module value |
 | helm_artifact_hub | `skipped_not_applicable` | no Kubernetes chart value |
@@ -62,17 +63,17 @@
 
 - Tokens were read from macOS Keychain into temporary command environments/config files only.
 - Temporary npmrc, Maven settings, Docker workspace, GitLab upload archive, and generated package archives were deleted after use.
-- JSR token was exposed by the JSR CLI error output in the earlier run and must be revoked before retry.
+- JSR token was exposed by CLI failure output again and must be revoked before retry.
 - CocoaPods token is stored as a GitHub Actions secret for this repository.
 
 ## Follow-Up Queue
 
-- jsr: Revoke exposed JSR token, create a fresh token, and store it in publish-package-backlinks/jsr-token (owner: user)
 - maven_central_javadoc: Retry Central status/repo1/search/javadoc verification after indexing; deployment publish API returned 204 (owner: agent_or_user)
 - pkg_go_dev: Retry pkg.go.dev page after indexing; Go proxy already resolves v0.1.0 (owner: agent_or_user)
-- cpan_metacpan: Replace PAUSE user/token; current Keychain credential still returns 401 (owner: user)
-- packagist: Add Packagist API token or complete Packagist GitHub OAuth (owner: user)
 - chocolatey: Wait for moderation to leave Pending (owner: platform)
 - hackage: Install cabal and add publish-package-backlinks/hackage-token (owner: user)
 - open_vsx: Create/verify Open VSX publisher namespace bbwdadfg and add publish-package-backlinks/openvsx-token (owner: user)
 - wordpress_plugin_directory: Submit /tmp/productshotai-site-kit-wordpress.zip in WordPress.org plugin review flow (owner: user)
+- packagist: Re-store a non-empty Packagist token in publish-package-backlinks/packagist-token (owner: user)
+- jsr: Create the JSR package page, revoke the exposed token, then store a fresh publish token (owner: user)
+- cpan_metacpan: Generate a new PAUSE upload token from the logged-in PAUSE account and store it in publish-package-backlinks/cpan-token (owner: user)
