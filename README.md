@@ -42,10 +42,10 @@ Additional ecosystem manifests and helper sources are included for trial publish
 - NuGet: `nuget/ProductShotAI.SiteKit/ProductShotAI.SiteKit.csproj`
 - CocoaPods: `ProductShotAISiteKit.podspec`
 - LuaRocks: `productshotai-site-kit-0.1.0-1.rockspec`
-- Hackage: `productshotai-site-kit.cabal`
+- Hackage: `productshotai-site-kit.cabal` (prepared locally; publishing abandoned due developer validation)
 - Chocolatey: `chocolatey/productshotai-site-kit.nuspec`
 - Open VSX: `open-vsx/`
-- WordPress Plugin Directory: `wordpress/productshotai-site-kit/`
+- WordPress Plugin Directory: `wordpress/baiwei-content-links-productshot-ai/`
 - Homebrew tap and AUR packaging: `packaging/`
 
 ## Usage

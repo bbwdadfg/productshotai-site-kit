@@ -19,8 +19,8 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T11:10:23Z",
-    "finished_at": "2026-06-20T11:10:23Z"
+    "run_finished_at": "2026-06-20T11:14:59Z",
+    "finished_at": "2026-06-20T11:14:59Z"
   },
   "platforms": [
     {
@@ -477,7 +477,7 @@
     },
     {
       "platform": "hackage",
-      "status": "blocked_credentials",
+      "status": "skipped_policy",
       "artifact_type": "haskell_package",
       "automation_level": "automated_with_token",
       "package": "productshotai-site-kit",
@@ -489,18 +489,18 @@
         "repository",
         "cabal_metadata"
       ],
-      "credential_status": "missing_keychain",
-      "blocked_reason": "missing publish-package-backlinks/hackage-token; cabal/ghc installed and local package checks passed",
+      "credential_status": "none",
+      "blocked_reason": "abandoned: Hackage upload requires additional developer validation/approval for this package, so this platform will not be pursued",
       "verification": {
-        "method": "cabal_build_test_check_sdist",
-        "result": "cabal build all, cabal test all, cabal check, and cabal sdist passed; tarball generated at dist-newstyle/sdist/productshotai-site-kit-0.1.0.tar.gz",
-        "checked_at": "2026-06-20T11:10:23Z"
+        "method": "abandoned_by_user_decision",
+        "result": "Local cabal build/test/check/sdist passed earlier, but Hackage publishing was intentionally abandoned due additional developer validation requirement",
+        "checked_at": "2026-06-20T11:14:59Z"
       },
       "cleanup": [
         "dist-newstyle ignored as local build output"
       ],
       "notes": [
-        "Needs Hackage account upload token before live cabal upload"
+        "User decided not to pursue Hackage further"
       ]
     },
     {
@@ -678,24 +678,24 @@
     },
     {
       "platform": "wordpress_plugin_directory",
-      "status": "submitted",
+      "status": "blocked_review",
       "artifact_type": "wordpress_plugin",
       "automation_level": "manual_review",
-      "package": "productshot-ai-site-kit",
-      "version": "0.1.0",
-      "public_url": "https://wordpress.org/plugins/productshot-ai-site-kit/",
+      "package": "baiwei-content-links-productshot-ai",
+      "version": "0.1.1",
+      "public_url": "https://wordpress.org/plugins/baiwei-content-links-productshot-ai/",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
       "link_surfaces_verified": [],
       "credential_status": "none",
-      "blocked_reason": "",
+      "blocked_reason": "WordPress review requested rename/ownership clarification; corrected plugin zip prepared for re-upload and slug change request",
       "verification": {
-        "method": "wordpress_submission_accepted",
-        "result": "WordPress automated plugin scan passed and ProductShot AI Site Kit is Awaiting Review under slug productshot-ai-site-kit",
-        "checked_at": "2026-06-20T10:41:18Z"
+        "method": "review_email_actioned_locally",
+        "result": "Renamed plugin to Baiwei Content Links for ProductShot AI, changed contributor to baiwei123, changed author metadata, and prepared new slug baiwei-content-links-productshot-ai",
+        "checked_at": "2026-06-20T11:14:59Z"
       },
       "cleanup": [],
       "notes": [
-        "Submitted on 2026-06-20; wait for WordPress Plugin Directory review email before SVN release"
+        "Reply to review thread requesting slug change to baiwei-content-links-productshot-ai after uploading corrected zip"
       ]
     },
     {
@@ -822,12 +822,7 @@
     },
     {
       "platform": "wordpress_plugin_directory",
-      "reason": "Wait for WordPress Plugin Directory review email and SVN approval",
-      "owner": "platform"
-    },
-    {
-      "platform": "hackage",
-      "reason": "Create or log into Hackage and provide an upload token for productshotai-site-kit",
+      "reason": "Upload corrected WordPress zip and reply requesting slug change to baiwei-content-links-productshot-ai",
       "owner": "user"
     },
     {

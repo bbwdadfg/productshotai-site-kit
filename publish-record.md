@@ -2,16 +2,17 @@
 - Site: <https://productshotai.app>
 - Source repo: <https://github.com/bbwdadfg/productshotai-site-kit>
 - Started: 2026-06-20T04:30:00Z
-- Finished: 2026-06-20T11:10:23Z
+- Finished: 2026-06-20T11:14:59Z
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 2 |
+| blocked_credentials | 1 |
+| blocked_review | 1 |
 | skipped_not_applicable | 3 |
-| skipped_policy | 3 |
-| submitted | 2 |
+| skipped_policy | 4 |
+| submitted | 1 |
 | verified | 21 |
 
 ## Published Links
@@ -39,17 +40,17 @@
 | github_packages | `@bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/productshotai-site-kit> | GitHub npm package verified via npm view against npm.pkg.github.com |
 | gitlab_packages | `productshotai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/productshotai-site-kit> | GitLab API verified generic package and public project |
 | open_vsx | `productshotai-site-kit` | `0.1.0` | <https://open-vsx.org/extension/bbwdadfg/productshotai-site-kit> | Open VSX API verified productshotai-site-kit 0.1.0, homepage, repository, and downloadable VSIX |
-| wordpress_plugin_directory | `productshot-ai-site-kit` | `0.1.0` | <https://wordpress.org/plugins/productshot-ai-site-kit/> | WordPress automated plugin scan passed and ProductShot AI Site Kit is Awaiting Review under slug productshot-ai-site-kit |
 | homebrew | `productshotai-site-kit` | `0.1.1` | <https://github.com/bbwdadfg/homebrew-productshotai-site-kit> | Public tap verified; brew tap, brew trust --formula, brew install, CLI smoke test, and brew test passed |
 
 ## Blocked Or Manual Steps
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| hackage | `blocked_credentials` | missing publish-package-backlinks/hackage-token; cabal/ghc installed and local package checks passed |
+| hackage | `skipped_policy` | abandoned: Hackage upload requires additional developer validation/approval for this package, so this platform will not be pursued |
 | terraform_registry | `skipped_not_applicable` | no infrastructure module value |
 | helm_artifact_hub | `skipped_not_applicable` | no Kubernetes chart value |
 | ansible_galaxy | `skipped_not_applicable` | no automation role value |
+| wordpress_plugin_directory | `blocked_review` | WordPress review requested rename/ownership clarification; corrected plugin zip prepared for re-upload and slug change request |
 | aur | `blocked_credentials` | AUR SSH access denied; add local SSH public key to an AUR account before git push |
 | conda_forge | `skipped_policy` | no scientific/Python conda value |
 | cran | `skipped_policy` | no CRAN-suitable R package |
@@ -67,7 +68,6 @@
 ## Follow-Up Queue
 
 - chocolatey: Wait for moderation to leave Pending automated review (owner: platform)
-- wordpress_plugin_directory: Wait for WordPress Plugin Directory review email and SVN approval (owner: platform)
-- hackage: Create or log into Hackage and provide an upload token for productshotai-site-kit (owner: user)
+- wordpress_plugin_directory: Upload corrected WordPress zip and reply requesting slug change to baiwei-content-links-productshot-ai (owner: user)
 - aur: Add /Users/baiwei/.ssh/id_ed25519.pub to an AUR account, then push packaging/aur (owner: user)
 - credentials: Revoke/recreate JSR, Packagist, and PAUSE tokens because they were pasted into chat for this run (owner: user)

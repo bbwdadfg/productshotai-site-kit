@@ -1,17 +1,18 @@
 <?php
 /**
- * Plugin Name: ProductShot AI Site Kit
- * Plugin URI: https://github.com/bbwdadfg/productshotai-site-kit/tree/main/wordpress/productshotai-site-kit
+ * Plugin Name: Baiwei Content Links for ProductShot AI
+ * Plugin URI: https://github.com/bbwdadfg/productshotai-site-kit/tree/main/wordpress/baiwei-content-links-productshot-ai
  * Description: Shortcodes for linking WordPress content to ProductShot AI workbench and public pages.
- * Version: 0.1.0
- * Author: ProductShot AI
- * Author URI: https://productshotai.app
+ * Version: 0.1.1
+ * Author: Baiwei Chu
+ * Author URI: https://github.com/bbwdadfg
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: baiwei-content-links-productshot-ai
  * Requires at least: 6.0
  * Requires PHP: 7.4
  *
- * @package ProductShotAISiteKit
+ * @package BaiweiContentLinksProductShotAI
  */
 
 if (!defined('ABSPATH')) {
@@ -60,7 +61,7 @@ function productshotai_site_kit_shortcode($atts)
     $rel = $target === '_blank' ? ' rel="noopener noreferrer"' : '';
 
     return sprintf(
-        '<a class="productshotai-site-kit-link" href="%s" target="%s"%s>%s</a>',
+        '<a class="baiwei-content-links-productshot-ai-link" href="%s" target="%s"%s>%s</a>',
         esc_url($url),
         esc_attr($target),
         $rel,
@@ -74,7 +75,7 @@ function productshotai_site_kit_action_links($links)
     $links[] = sprintf(
         '<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>',
         esc_url(PRODUCTSHOTAI_SITE_KIT_BASE . '/#workbench'),
-        esc_html__('Workbench', 'productshotai-site-kit')
+        esc_html__('Workbench', 'baiwei-content-links-productshot-ai')
     );
 
     return $links;
