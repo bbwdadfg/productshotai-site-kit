@@ -1,0 +1,11 @@
+productshotai_workspace_root: "{{ ansible_env.HOME | default('/tmp') }}/productshotai-assets"
+productshotai_workspace_directories:
+  - input
+  - prompts
+  - generated
+  - approved
+productshotai_links:
+  home: "https://productshotai.app/"
+  workbench: "https://productshotai.app/#workbench"
+  pricing: "https://productshotai.app/#pricing"
+  blog: "https://productshotai.app/blog/"

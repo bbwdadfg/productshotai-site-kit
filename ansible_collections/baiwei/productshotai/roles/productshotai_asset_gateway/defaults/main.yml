@@ -1,0 +1,6 @@
+---
+productshotai_gateway_dir: "{{ ansible_env.HOME }}/productshotai-asset-gateway"
+productshotai_gateway_image: "ghcr.io/YOUR_ORG/productshotai-asset-gateway:0.1.0"
+productshotai_gateway_port: 8080
+productshotai_gateway_workspace_name: "ProductShot AI Assets"
+productshotai_gateway_asset_root: "/assets"

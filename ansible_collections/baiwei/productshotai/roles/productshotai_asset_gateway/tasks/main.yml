@@ -1,0 +1,21 @@
+---
+- name: Create ProductShot AI gateway directory
+  ansible.builtin.file:
+    path: "{{ productshotai_gateway_dir }}"
+    state: directory
+    mode: "0755"
+
+- name: Write ProductShot AI gateway compose file
+  ansible.builtin.copy:
+    dest: "{{ productshotai_gateway_dir }}/compose.yml"
+    mode: "0644"
+    content: |
+      services:
+        productshotai-asset-gateway:
+          image: {{ productshotai_gateway_image }}
+          ports:
+            - "{{ productshotai_gateway_port }}:8080"
+          environment:
+            WORKSPACE_NAME: {{ productshotai_gateway_workspace_name | to_json }}
+            ASSET_ROOT: {{ productshotai_gateway_asset_root | to_json }}
+          restart: unless-stopped

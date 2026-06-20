@@ -1,0 +1,23 @@
+- name: Create ProductShot AI workspace root
+  ansible.builtin.file:
+    path: "{{ productshotai_workspace_root }}"
+    state: directory
+    mode: "0755"
+
+- name: Create ProductShot AI workflow directories
+  ansible.builtin.file:
+    path: "{{ productshotai_workspace_root }}/{{ item }}"
+    state: directory
+    mode: "0755"
+  loop: "{{ productshotai_workspace_directories }}"
+
+- name: Write ProductShot AI workflow config
+  ansible.builtin.copy:
+    dest: "{{ productshotai_workspace_root }}/productshotai-workspace.json"
+    mode: "0644"
+    content: |
+      {
+        "workspaceRoot": "{{ productshotai_workspace_root }}",
+        "directories": {{ productshotai_workspace_directories | to_json }},
+        "links": {{ productshotai_links | to_json }}
+      }

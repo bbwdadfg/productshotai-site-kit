@@ -10,6 +10,7 @@ ProductShot AI helps ecommerce sellers generate product photos, white background
 
 - Build URLs for workbench, pricing, blog, support, legal, and localized pages
 - Expose public metadata for ProductShot AI package integrations
+- Generate product-image manifests and prompt-planning sheets for ecommerce photo batches
 - Preserve ProductShot's public English URL rule: English is prefixless, Simplified Chinese uses `/zh/`
 - Multi-ecosystem: available on npm, PyPI, crates.io, Go, RubyGems, pub.dev, Hex.pm, Clojars, and Docker Hub
 - New package ecosystem helpers prepared for JSR, Maven Central/javadoc.io, NuGet, CocoaPods, LuaRocks, CPAN/MetaCPAN, Hackage, Chocolatey, GitHub Packages, and GitLab Package Registry
@@ -29,10 +30,13 @@ mix hex.install productshotai_site_kit
 CLI usage:
 
 ```bash
-productshotai-site-kit home
-productshotai-site-kit workbench
-productshotai-site-kit metadata
+productshotai-site-kit urls --format json
+productshotai-site-kit manifest ./product-images --format csv
+productshotai-site-kit prompt-sheet ./product-images --format json
 ```
+
+The Python CLI scans local files only. It creates planning outputs and does not
+upload images or call ProductShot AI services.
 
 Additional ecosystem manifests and helper sources are included for trial publishing on newer channels:
 
@@ -47,6 +51,11 @@ Additional ecosystem manifests and helper sources are included for trial publish
 - Open VSX: `open-vsx/`
 - WordPress Plugin Directory: `wordpress/baiwei-content-links-productshot-ai/`
 - Homebrew tap and AUR packaging: `packaging/`
+- Conda-forge recipe preparation: `conda-forge/`
+- CRAN-oriented R helper package: `r/productshotaiR/`
+- Terraform Cloudflare R2 asset workspace module: `terraform/cloudflare-productshotai-assets/`
+- Helm chart and asset gateway container: `charts/productshotai-asset-gateway/`, `docker/asset-gateway/`
+- Ansible Galaxy collection preparation: `ansible_collections/baiwei/productshotai/`
 
 ## Usage
 

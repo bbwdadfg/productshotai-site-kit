@@ -19,8 +19,8 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T12:48:50Z",
-    "finished_at": "2026-06-20T12:48:50Z"
+    "run_finished_at": "2026-06-20T14:23:55Z",
+    "finished_at": "2026-06-20T14:23:55Z"
   },
   "platforms": [
     {
@@ -587,65 +587,85 @@
     },
     {
       "platform": "terraform_registry",
-      "status": "skipped_not_applicable",
+      "status": "dry_run_passed",
       "artifact_type": "terraform_module",
       "automation_level": "semi_auto",
-      "package": "terraform-productshotai-site-kit",
+      "package": "terraform-cloudflare-productshotai-assets",
       "version": "0.1.0",
       "public_url": "",
-      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "no infrastructure module value",
+      "repository_url": "https://github.com/bbwdadfg/terraform-cloudflare-productshotai-assets",
+      "link_surfaces_verified": [
+        "module_readme",
+        "main_tf",
+        "variables_tf",
+        "examples"
+      ],
+      "credential_status": "registry_connection_pending",
+      "blocked_reason": "Terraform module fmt/init/validate passed locally; live listing still requires extracting to a public terraform-cloudflare-productshotai-assets repo, adding a semver tag, and connecting Terraform Registry.",
       "verification": {
-        "method": "not_verified",
-        "result": "No natural infrastructure module for this SaaS helper",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "terraform_fmt_init_validate",
+        "result": "terraform fmt -check -recursive, terraform init -backend=false, and terraform validate passed for terraform/cloudflare-productshotai-assets",
+        "checked_at": "2026-06-20T14:10:45Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Module should be extracted to bbwdadfg/terraform-cloudflare-productshotai-assets before Registry connection"
+      ]
     },
     {
       "platform": "helm_artifact_hub",
-      "status": "skipped_not_applicable",
+      "status": "dry_run_passed",
       "artifact_type": "helm_chart",
       "automation_level": "semi_auto",
-      "package": "productshotai-site-kit",
+      "package": "productshotai-asset-gateway",
       "version": "0.1.0",
       "public_url": "",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "no Kubernetes chart value",
+      "link_surfaces_verified": [
+        "chart_yaml",
+        "templates",
+        "asset_gateway_server",
+        "artifacthub_metadata"
+      ],
+      "credential_status": "image_and_chart_repo_pending",
+      "blocked_reason": "Helm chart and Node asset gateway validated locally; live listing still requires publishing the container image, hosting a chart repository/index, and letting Artifact Hub index it.",
       "verification": {
-        "method": "not_verified",
-        "result": "No Kubernetes/self-hosted deployment artifact",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "helm_lint_template_and_node_tests",
+        "result": "npm test --prefix docker/asset-gateway, helm lint, and helm template passed for productshotai-asset-gateway",
+        "checked_at": "2026-06-20T14:10:45Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Asset gateway exposes /healthz, /config.json, and a workspace page; chart deploys the gateway with ConfigMap-based workspace settings"
+      ]
     },
     {
       "platform": "ansible_galaxy",
-      "status": "skipped_not_applicable",
-      "artifact_type": "ansible_collection_or_role",
+      "status": "dry_run_passed",
+      "artifact_type": "ansible_collection",
       "automation_level": "automated_with_token",
-      "package": "productshotai.site_kit",
+      "package": "baiwei.productshotai",
       "version": "0.1.0",
       "public_url": "",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "missing_keychain",
-      "blocked_reason": "no automation role value",
-      "verification": {
-        "method": "not_verified",
-        "result": "No config-management use case; Ansible token also missing",
-        "checked_at": "2026-06-20T05:23:31.960Z"
-      },
-      "cleanup": [
-        "temporary credential variables/configs cleared"
+      "link_surfaces_verified": [
+        "galaxy_yml_homepage",
+        "collection_readme",
+        "workspace_role",
+        "example_playbook"
       ],
-      "notes": []
+      "credential_status": "galaxy_namespace_token_pending",
+      "blocked_reason": "Ansible collection build and local check-mode playbook passed; live publishing still requires Galaxy namespace confirmation and an API token.",
+      "verification": {
+        "method": "ansible_galaxy_build_and_check_mode",
+        "result": "ansible-galaxy collection build passed and the example workspace playbook passed against localhost in check mode",
+        "checked_at": "2026-06-20T14:10:45Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "Workspace role creates input, prompts, generated, and approved directories plus ProductShot AI workflow JSON",
+        "Asset gateway role requires productshotai_gateway_image to be set to a published image before use"
+      ]
     },
     {
       "platform": "open_vsx",
@@ -673,7 +693,8 @@
         "temporary credential variables/configs cleared"
       ],
       "notes": [
-        "Published through Open VSX browser session after Eclipse ECA and Open VSX Publisher Agreement were completed"
+        "Published through Open VSX browser session after Eclipse ECA and Open VSX Publisher Agreement were completed",
+        "Open VSX package/version links are verified, but publisher identity is not Open VSX verified."
       ]
     },
     {
@@ -733,43 +754,58 @@
     },
     {
       "platform": "conda_forge",
-      "status": "skipped_policy",
+      "status": "planned",
       "artifact_type": "conda_recipe",
       "automation_level": "pr_review",
       "package": "productshotai-site-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "public_url": "",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "no scientific/Python conda value",
+      "link_surfaces_verified": [
+        "python_cli",
+        "conda_recipe",
+        "repository_readme"
+      ],
+      "credential_status": "staged_recipes_pr_pending",
+      "blocked_reason": "Conda recipe and CLI workflow are prepared, but no conda-forge PR has been opened; rattler-build cannot parse the conda-build Jinja recipe, so conda-build or staged-recipes CI is still needed with a released source URL and sha256.",
       "verification": {
-        "method": "not_verified",
-        "result": "Generic site helper is not a meaningful conda-forge package",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "python_build_tests_and_recipe_static_checks",
+        "result": "Python tests/build passed and recipe smoke commands cover urls, manifest, and prompt-sheet; rattler-build failed because the recipe uses conda-build Jinja meta.yaml syntax.",
+        "checked_at": "2026-06-20T14:10:45Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Added manifest, prompt-sheet, and urls CLI workflows for product image batch planning",
+        "Local recipe uses source.path and must be converted to released source URL plus sha256 before staged-recipes PR"
+      ]
     },
     {
       "platform": "cran",
-      "status": "skipped_policy",
+      "status": "dry_run_passed",
       "artifact_type": "r_package",
       "automation_level": "manual_review",
-      "package": "productshotai.sitekit",
+      "package": "productshotaiR",
       "version": "0.1.0",
       "public_url": "",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "no CRAN-suitable R package",
+      "link_surfaces_verified": [
+        "DESCRIPTION_URL",
+        "README",
+        "R_sources",
+        "tests"
+      ],
+      "credential_status": "cran_submission_pending",
+      "blocked_reason": "R package passes local R CMD check --as-cran with 0 ERROR and 0 WARNING; live CRAN submission has not been made.",
       "verification": {
-        "method": "not_verified",
-        "result": "No real R utility exists",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "r_cmd_build_check_as_cran",
+        "result": "R CMD build and R CMD check --as-cran passed with 0 ERROR, 0 WARNING, and 2 NOTE (new submission and local HTML tidy version).",
+        "checked_at": "2026-06-20T14:10:45Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Added base-R product metadata normalization, prompt sheet, image manifest, and URL helpers.",
+        "Local CRAN dry run passed with 0 ERROR, 0 WARNING, and 2 NOTE; live CRAN submission is still pending."
+      ]
     },
     {
       "platform": "flathub",
@@ -840,6 +876,31 @@
     {
       "platform": "credentials",
       "reason": "Revoke/recreate JSR, Packagist, and PAUSE tokens because they were pasted into chat for this run",
+      "owner": "user"
+    },
+    {
+      "platform": "terraform_registry",
+      "reason": "Extract module to bbwdadfg/terraform-cloudflare-productshotai-assets, tag v0.1.0, then connect the Terraform Registry module",
+      "owner": "user"
+    },
+    {
+      "platform": "helm_artifact_hub",
+      "reason": "Publish the asset-gateway image and chart repository, then request Artifact Hub indexing",
+      "owner": "user"
+    },
+    {
+      "platform": "ansible_galaxy",
+      "reason": "Confirm the baiwei Galaxy namespace and token, then publish the collection that already builds locally",
+      "owner": "user"
+    },
+    {
+      "platform": "conda_forge",
+      "reason": "Release source archive, convert recipe to URL+sha256, then open staged-recipes PR and let conda-forge CI or conda-build validate the Jinja meta.yaml recipe",
+      "owner": "user"
+    },
+    {
+      "platform": "cran",
+      "reason": "Submit productshotaiR only if you accept the CRAN review burden; local R CMD check --as-cran already passes with 0 ERROR, 0 WARNING, and 2 NOTE",
       "owner": "user"
     }
   ]

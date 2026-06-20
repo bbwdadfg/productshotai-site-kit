@@ -1,0 +1,16 @@
+namespace: baiwei
+name: productshotai
+version: 0.1.0
+readme: README.md
+authors:
+  - Baiwei Chu
+description: ProductShot AI workspace setup helpers for product-photo teams.
+license:
+  - MIT
+tags:
+  - product_photography
+  - ecommerce
+  - workflow
+repository: https://github.com/bbwdadfg/productshotai-site-kit
+homepage: https://productshotai.app
+issues: https://github.com/bbwdadfg/productshotai-site-kit/issues

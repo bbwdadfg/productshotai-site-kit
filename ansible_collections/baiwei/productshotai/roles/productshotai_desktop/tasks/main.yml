@@ -1,0 +1,6 @@
+---
+- name: Install ProductShot AI CLI with pipx when enabled
+  ansible.builtin.command:
+    cmd: "pipx install {{ productshotai_cli_package }}"
+    creates: "{{ ansible_env.HOME }}/.local/bin/productshotai-site-kit"
+  when: productshotai_install_cli | bool

@@ -1,0 +1,19 @@
+apiVersion: v2
+name: productshotai-asset-gateway
+description: Tiny ProductShot AI asset workflow status gateway.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+home: https://productshotai.app
+sources:
+  - https://github.com/bbwdadfg/productshotai-site-kit
+keywords:
+  - product-photography
+  - ecommerce
+  - asset-workflow
+maintainers:
+  - name: ProductShot AI
+    url: https://productshotai.app
+annotations:
+  artifacthub.io/category: integration-delivery
+  artifacthub.io/license: MIT

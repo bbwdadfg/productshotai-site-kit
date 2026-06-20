@@ -1,0 +1,7 @@
+- name: Prepare a local ProductShot AI product-photo workspace
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - role: baiwei.productshotai.productshotai_workspace
+      productshotai_workspace_root: /tmp/productshotai-assets

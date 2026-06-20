@@ -1,0 +1,11 @@
+{
+  "name": "productshotai-asset-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tiny ProductShot AI asset workflow status gateway.",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
