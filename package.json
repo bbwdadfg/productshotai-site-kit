@@ -1,6 +1,6 @@
 {
   "name": "productshotai-site-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Public URL helpers and metadata constants for ProductShot AI",
   "main": "index.js",
   "bin": {

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "productshotai-site-kit"
-version = "0.1.1"
+version = "0.1.2"
 description = "URL helpers and metadata utilities for ProductShot AI - AI product photography generator for ecommerce product photos"
 readme = "README.md"
 license = "MIT"
