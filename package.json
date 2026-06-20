@@ -1,0 +1,31 @@
+{
+  "name": "productshotai-site-kit",
+  "version": "0.1.0",
+  "description": "Public URL helpers and metadata constants for ProductShot AI",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "product-photography",
+    "ai-product-photography",
+    "productshot",
+    "ecommerce-product-photos",
+    "url-helpers"
+  ],
+  "homepage": "https://productshotai.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbwdadfg/productshotai-site-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bbwdadfg/productshotai-site-kit/issues"
+  },
+  "author": "ProductShot AI",
+  "license": "MIT"
+}

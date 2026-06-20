@@ -1,0 +1,22 @@
+{
+    "name": "bbwdadfg/productshotai-site-kit",
+    "description": "URL helpers and metadata utilities for ProductShot AI - AI product photography generator for ecommerce product photos",
+    "homepage": "https://productshotai.app",
+    "license": "MIT",
+    "authors": [
+        { "name": "ProductShot AI" }
+    ],
+    "support": {
+        "source": "https://github.com/bbwdadfg/productshotai-site-kit",
+        "issues": "https://github.com/bbwdadfg/productshotai-site-kit/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProductShotAI\\SiteKit\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "keywords": ["product-photography", "ai-product-photography", "productshot", "url-helpers"]
+}

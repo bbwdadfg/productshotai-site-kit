@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "productshotai-site-kit"
+version = "0.1.0"
+description = "URL helpers and metadata utilities for ProductShot AI - AI product photography generator for ecommerce product photos"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [{ name = "ProductShot AI" }]
+keywords = ["product-photography", "ai-product-photography", "productshot", "ecommerce-product-photos", "url-helpers"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://productshotai.app"
+Repository = "https://github.com/bbwdadfg/productshotai-site-kit"
+Issues = "https://github.com/bbwdadfg/productshotai-site-kit/issues"

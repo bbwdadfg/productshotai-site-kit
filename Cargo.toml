@@ -1,0 +1,13 @@
+[package]
+name = "productshotai-site-kit"
+version = "0.1.0"
+edition = "2021"
+description = "URL helpers and metadata utilities for ProductShot AI - AI product photography generator for ecommerce product photos"
+homepage = "https://productshotai.app"
+repository = "https://github.com/bbwdadfg/productshotai-site-kit"
+documentation = "https://docs.rs/productshotai-site-kit"
+readme = "README.md"
+license = "MIT"
+keywords = ["product-photography", "ai-product-photography", "productshot"]
+categories = ["web-programming"]
+include = ["src/lib.rs", "Cargo.toml", "README.md", "LICENSE"]

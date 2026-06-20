@@ -1,0 +1,41 @@
+# Build artifacts
+/target/
+/dist/
+/_build/
+/deps/
+/doc/
+/build/
+/blib/
+/.dart_tool/
+/.pub/
+/Makefile
+/MYMETA.json
+/MYMETA.yml
+/pm_to_blib
+/ProductShotAI-SiteKit-*/
+/MANIFEST.bak
+/nuget/**/bin/
+/nuget/**/obj/
+
+# Lock files
+/pubspec.lock
+/mix.lock
+/Cargo.lock
+
+# Node
+node_modules/
+
+# Python
+*.egg-info/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Generated archives
+*.tar.gz
+*.gem
+*.whl
+*.crate
+*.nupkg

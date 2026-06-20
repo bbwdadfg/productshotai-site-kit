@@ -1,0 +1,14 @@
+{
+  "name": "@bbwdadfg/productshotai-site-kit",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "license": "MIT",
+  "publish": {
+    "include": [
+      "mod.ts",
+      "mod_test.ts",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}

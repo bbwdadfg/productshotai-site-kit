@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>productshotai-site-kit</id>
+    <version>0.1.0</version>
+    <title>ProductShot AI Site Kit</title>
+    <authors>ProductShot AI</authors>
+    <owners>ProductShot AI</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://productshotai.app</projectUrl>
+    <readme>README.md</readme>
+    <repository type="git" url="https://github.com/bbwdadfg/productshotai-site-kit" />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PowerShell URL helpers and metadata utilities for ProductShot AI.</description>
+    <summary>ProductShot AI URL helper package.</summary>
+    <tags>product-photography ai-product-photography productshot url-helpers</tags>
+  </metadata>
+  <files>
+    <file src="tools\productshotai-site-kit.psm1" target="tools\productshotai-site-kit.psm1" />
+    <file src="..\README.md" target="README.md" />
+    <file src="..\LICENSE" target="LICENSE" />
+  </files>
+</package>

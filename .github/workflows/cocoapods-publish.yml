@@ -1,0 +1,32 @@
+name: Publish CocoaPods
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    env:
+      COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+    steps:
+      - name: Checkout CocoaPods source tag
+        uses: actions/checkout@v4
+        with:
+          ref: cocoapods-v0.1.0
+
+      - name: Select Xcode
+        run: |
+          set -euo pipefail
+          sudo xcode-select -s "$(ls -d /Applications/Xcode*.app/Contents/Developer | sort -V | tail -1)"
+          xcodebuild -version
+          xcrun --find simctl
+
+      - name: Install CocoaPods
+        run: gem install cocoapods -v 1.16.2 --no-document
+
+      - name: Validate podspec
+        run: pod spec lint ProductShotAISiteKit.podspec --allow-warnings --verbose
+
+      - name: Publish pod
+        run: pod trunk push ProductShotAISiteKit.podspec --allow-warnings --verbose

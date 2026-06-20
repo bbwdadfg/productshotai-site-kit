@@ -1,0 +1,59 @@
+# Dart
+.dart_tool/
+.pub/
+build/
+pubspec.lock
+
+# Rust
+target/
+Cargo.lock
+
+# Elixir
+_build/
+deps/
+mix.lock
+doc/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+
+# Java
+*.class
+target/
+src/main/
+src/test/
+
+# Go
+*.test
+
+# General
+.DS_Store
+*.gem
+*.crate
+
+# Additional ecosystem trial files
+jsr.json
+mod.ts
+mod_test.ts
+Makefile.PL
+MANIFEST
+Makefile
+MYMETA.json
+MYMETA.yml
+blib/
+pm_to_blib
+t/
+lib/ProductShotAI/
+Sources/
+ProductShotAISiteKit.podspec
+nuget/
+lua/
+test_lua.lua
+*.rockspec
+src-hs/
+test-hs/
+*.cabal
+chocolatey/
