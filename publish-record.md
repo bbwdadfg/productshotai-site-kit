@@ -3,20 +3,19 @@
 - Site: <https://productshotai.app>
 - Source repo: <https://github.com/bbwdadfg/productshotai-site-kit>
 - Started: 2026-06-20T04:30:00Z
-- Finished: 2026-06-20T06:45:17Z
+- Finished: 2026-06-20T07:10:04Z
 
 ## Summary
 
 | Status | Count |
 | --- | ---: |
-| blocked_credentials | 4 |
-| blocked_namespace | 1 |
+| blocked_credentials | 2 |
 | blocked_review | 1 |
-| published | 3 |
+| published | 4 |
 | skipped_not_applicable | 3 |
 | skipped_policy | 5 |
 | submitted | 1 |
-| verified | 13 |
+| verified | 15 |
 
 ## Published Links
 
@@ -24,6 +23,7 @@
 | --- | --- | --- | --- | --- |
 | github | `bbwdadfg/productshotai-site-kit` | `v0.1.0` | <https://github.com/bbwdadfg/productshotai-site-kit> | public repo, homepage, and pushed tags verified |
 | pkg_go_dev | `github.com/bbwdadfg/productshotai-site-kit` | `v0.1.0` | <https://pkg.go.dev/github.com/bbwdadfg/productshotai-site-kit> | Go proxy resolved v0.1.0; pkg.go.dev page still indexing |
+| packagist | `bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://packagist.org/packages/bbwdadfg/productshotai-site-kit> | Packagist create-package API returned success; P2 API verified v0.1.0 with homepage and source repository |
 | crates_io_docs_rs | `productshotai-site-kit` | `0.1.0` | <https://crates.io/crates/productshotai-site-kit> | crates.io API verified homepage and repository; docs.rs still 404/indexing |
 | rubygems | `productshotai-site-kit` | `0.1.0` | <https://rubygems.org/gems/productshotai-site-kit> | RubyGems API verified version, homepage, and source_code_uri |
 | npm | `productshotai-site-kit` | `0.1.0` | <https://www.npmjs.com/package/productshotai-site-kit> | npm registry JSON verified latest, homepage, and repository |
@@ -32,10 +32,12 @@
 | hex_hexdocs | `productshotai_site_kit` | `0.1.0` | <https://hex.pm/packages/productshotai_site_kit> | Hex API verified package links; HexDocs published and redirects to package docs host |
 | clojars | `io.github.bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://clojars.org/io.github.bbwdadfg/productshotai-site-kit> | Clojars repo POM verified homepage and SCM links |
 | docker_hub | `baiwei111/productshotai-site-kit` | `0.1.0` | <https://hub.docker.com/r/baiwei111/productshotai-site-kit> | Docker Registry manifest verified schemaVersion 2, config digest, and layer count |
+| jsr | `@bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://jsr.io/@bbwdadfg/productshotai-site-kit> | JSR publish succeeded; meta.json verified latest 0.1.0 for @bbwdadfg/productshotai-site-kit |
 | maven_central_javadoc | `io.github.bbwdadfg:productshotai-site-kit` | `0.1.0` | <https://central.sonatype.com/artifact/io.github.bbwdadfg/productshotai-site-kit> | Central bundle uploaded, validated, and publish API returned HTTP 204; Central status API returned 500 and repo1/search indexing not visible yet |
 | nuget | `ProductShotAI.SiteKit` | `0.1.0` | <https://www.nuget.org/packages/ProductShotAI.SiteKit/> | NuGet flat-container API verified version 0.1.0 |
 | cocoapods | `ProductShotAISiteKit` | `0.1.0` | <https://cocoapods.org/pods/ProductShotAISiteKit> | GitHub Actions run 27862372191 published ProductShotAISiteKit 0.1.0; pod trunk info and CocoaPods page verified homepage and GitHub links |
 | luarocks | `productshotai-site-kit` | `0.1.0-1` | <https://luarocks.org/modules/bbwdadfg/productshotai-site-kit> | LuaRocks module page verified version and homepage |
+| cpan_metacpan | `ProductShotAI-SiteKit` | `0.1.0` | <https://metacpan.org/release/ProductShotAI-SiteKit> | PAUSE /api/upload returned Upload succeeded for ProductShotAI-SiteKit-0.1.0.tar.gz; CPAN and MetaCPAN indexing not visible yet |
 | chocolatey | `productshotai-site-kit` | `0.1.0` | <https://community.chocolatey.org/packages/productshotai-site-kit> | Chocolatey page shows Pending with ProductShot AI and homepage link |
 | github_packages | `@bbwdadfg/productshotai-site-kit` | `0.1.0` | <https://github.com/users/bbwdadfg/packages/npm/package/productshotai-site-kit> | GitHub npm package verified via npm view against npm.pkg.github.com |
 | gitlab_packages | `productshotai-site-kit` | `0.1.0` | <https://gitlab.com/baiwei.chu/productshotai-site-kit> | GitLab API verified generic package and public project |
@@ -44,9 +46,6 @@
 
 | Platform | Status | Reason |
 | --- | --- | --- |
-| packagist | `blocked_credentials` | publish-package-backlinks/packagist-token exists but contains an empty password value |
-| jsr | `blocked_namespace` | JSR package does not exist yet and must be created on jsr.io before CLI publish; token was exposed by CLI failure output |
-| cpan_metacpan | `blocked_credentials` | PAUSE user/token rejected with 401 Unauthorized |
 | hackage | `blocked_credentials` | missing publish-package-backlinks/hackage-token and cabal unavailable |
 | terraform_registry | `skipped_not_applicable` | no infrastructure module value |
 | helm_artifact_hub | `skipped_not_applicable` | no Kubernetes chart value |
@@ -63,7 +62,7 @@
 
 - Tokens were read from macOS Keychain into temporary command environments/config files only.
 - Temporary npmrc, Maven settings, Docker workspace, GitLab upload archive, and generated package archives were deleted after use.
-- JSR token was exposed by CLI failure output again and must be revoked before retry.
+- JSR, Packagist, and PAUSE tokens were pasted into chat for this run; revoke and replace them after this publishing pass.
 - CocoaPods token is stored as a GitHub Actions secret for this repository.
 
 ## Follow-Up Queue
@@ -74,6 +73,5 @@
 - hackage: Install cabal and add publish-package-backlinks/hackage-token (owner: user)
 - open_vsx: Create/verify Open VSX publisher namespace bbwdadfg and add publish-package-backlinks/openvsx-token (owner: user)
 - wordpress_plugin_directory: Submit /tmp/productshotai-site-kit-wordpress.zip in WordPress.org plugin review flow (owner: user)
-- packagist: Re-store a non-empty Packagist token in publish-package-backlinks/packagist-token (owner: user)
-- jsr: Create the JSR package page, revoke the exposed token, then store a fresh publish token (owner: user)
-- cpan_metacpan: Generate a new PAUSE upload token from the logged-in PAUSE account and store it in publish-package-backlinks/cpan-token (owner: user)
+- cpan_metacpan: Retry CPAN author directory and MetaCPAN release verification after PAUSE indexing/mirroring catches up (owner: agent_or_user)
+- credentials: Revoke/recreate JSR, Packagist, and PAUSE tokens because they were pasted into chat for this run (owner: user)
