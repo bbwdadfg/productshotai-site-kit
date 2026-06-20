@@ -19,8 +19,8 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T11:14:59Z",
-    "finished_at": "2026-06-20T11:14:59Z"
+    "run_finished_at": "2026-06-20T12:48:50Z",
+    "finished_at": "2026-06-20T12:48:50Z"
   },
   "platforms": [
     {
@@ -678,24 +678,31 @@
     },
     {
       "platform": "wordpress_plugin_directory",
-      "status": "blocked_review",
+      "status": "submitted",
       "artifact_type": "wordpress_plugin",
       "automation_level": "manual_review",
       "package": "baiwei-content-links-productshot-ai",
       "version": "0.1.1",
       "public_url": "https://wordpress.org/plugins/baiwei-content-links-productshot-ai/",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "none",
-      "blocked_reason": "WordPress review requested rename/ownership clarification; corrected plugin zip prepared for re-upload and slug change request",
+      "link_surfaces_verified": [
+        "plugin_header",
+        "readme",
+        "repository",
+        "wordpress_review_upload"
+      ],
+      "credential_status": "browser_session_used",
+      "blocked_reason": "",
       "verification": {
-        "method": "review_email_actioned_locally",
-        "result": "Renamed plugin to Baiwei Content Links for ProductShot AI, changed contributor to baiwei123, changed author metadata, and prepared new slug baiwei-content-links-productshot-ai",
-        "checked_at": "2026-06-20T11:14:59Z"
+        "method": "wordpress_review_update_uploaded_and_email_replied",
+        "result": "Updated 0.1.1 zip accepted by WordPress upload form; Gmail reply sent requesting slug change to baiwei-content-links-productshot-ai",
+        "checked_at": "2026-06-20T12:48:50Z"
       },
       "cleanup": [],
       "notes": [
-        "Reply to review thread requesting slug change to baiwei-content-links-productshot-ai after uploading corrected zip"
+        "Uploaded /Users/baiwei/Desktop/baiwei-content-links-productshot-ai-wordpress.zip for review",
+        "WordPress page showed new version 0.1.1 uploaded for review",
+        "Replied to plugins@wordpress.org review thread with slug change request"
       ]
     },
     {
@@ -822,8 +829,8 @@
     },
     {
       "platform": "wordpress_plugin_directory",
-      "reason": "Upload corrected WordPress zip and reply requesting slug change to baiwei-content-links-productshot-ai",
-      "owner": "user"
+      "reason": "Wait for WordPress Plugin Directory review response for baiwei-content-links-productshot-ai",
+      "owner": "platform"
     },
     {
       "platform": "aur",
