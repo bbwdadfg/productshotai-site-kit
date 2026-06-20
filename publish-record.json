@@ -1,0 +1,797 @@
+{
+  "schema_version": "1.0",
+  "target": {
+    "site": "https://productshotai.app",
+    "brand": "ProductShot AI",
+    "site_type": "ai_product_photography_saas",
+    "slug_hyphen": "productshotai-site-kit",
+    "slug_underscore": "productshotai_site_kit",
+    "source_repo": "https://github.com/bbwdadfg/productshotai-site-kit",
+    "useful_urls": [
+      "https://productshotai.app",
+      "https://productshotai.app/#workbench",
+      "https://productshotai.app/#pricing",
+      "https://productshotai.app/blog/",
+      "https://productshotai.app/contact/",
+      "https://productshotai.app/privacy/",
+      "https://productshotai.app/terms/",
+      "https://productshotai.app/refund-policy/",
+      "https://productshotai.app/zh/"
+    ],
+    "run_started_at": "2026-06-20T04:30:00Z",
+    "run_finished_at": "2026-06-20T05:23:31.960Z"
+  },
+  "platforms": [
+    {
+      "platform": "github",
+      "status": "verified",
+      "artifact_type": "source_repository",
+      "automation_level": "automated",
+      "package": "bbwdadfg/productshotai-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "gh_auth",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "public repo, homepage, and pushed tags verified",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "pkg_go_dev",
+      "status": "published",
+      "artifact_type": "go_module",
+      "automation_level": "automated_after_git_tag",
+      "package": "github.com/bbwdadfg/productshotai-site-kit",
+      "version": "v0.1.0",
+      "public_url": "https://pkg.go.dev/github.com/bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "none",
+      "blocked_reason": "",
+      "verification": {
+        "method": "publish_api_accepted",
+        "result": "Go proxy resolved v0.1.0; pkg.go.dev page still indexing",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "pkg.go.dev returned 404 immediately after fetch trigger; retry later"
+      ]
+    },
+    {
+      "platform": "packagist",
+      "status": "blocked_credentials",
+      "artifact_type": "composer_package",
+      "automation_level": "semi_auto",
+      "package": "bbwdadfg/productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://packagist.org/packages/bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "missing_keychain",
+      "blocked_reason": "missing publish-package-backlinks/packagist-token",
+      "verification": {
+        "method": "not_verified",
+        "result": "Packagist token/composer auth missing",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "crates_io_docs_rs",
+      "status": "published",
+      "artifact_type": "rust_crate",
+      "automation_level": "automated_with_token",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://crates.io/crates/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "local_cargo_token",
+      "blocked_reason": "",
+      "verification": {
+        "method": "publish_api_accepted",
+        "result": "crates.io API verified homepage and repository; docs.rs still 404/indexing",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "crates.io keyword length required shortening Cargo keywords before publish"
+      ]
+    },
+    {
+      "platform": "rubygems",
+      "status": "verified",
+      "artifact_type": "ruby_gem",
+      "automation_level": "trusted_cli_session",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://rubygems.org/gems/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "gem_credentials_file",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "RubyGems API verified version, homepage, and source_code_uri",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "npm",
+      "status": "verified",
+      "artifact_type": "javascript_package",
+      "automation_level": "automated_with_token",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://www.npmjs.com/package/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "npm registry JSON verified latest, homepage, and repository",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "pypi",
+      "status": "verified",
+      "artifact_type": "python_package",
+      "automation_level": "automated_with_token",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://pypi.org/project/productshotai-site-kit/",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "PyPI JSON API verified version, homepage, and repository",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "pub_dev",
+      "status": "verified",
+      "artifact_type": "dart_package",
+      "automation_level": "semi_auto_oauth",
+      "package": "productshotai_site_kit",
+      "version": "0.1.1",
+      "public_url": "https://pub.dev/packages/productshotai_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "dart_oauth_session",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "pub.dev API verified latest 0.1.1 with homepage and repository",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": [
+        "0.1.0 uploaded first with extra temporary CPAN files; 0.1.1 was published clean and is latest"
+      ]
+    },
+    {
+      "platform": "hex_hexdocs",
+      "status": "verified",
+      "artifact_type": "elixir_package",
+      "automation_level": "automated_with_token",
+      "package": "productshotai_site_kit",
+      "version": "0.1.0",
+      "public_url": "https://hex.pm/packages/productshotai_site_kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "Hex API verified package links; HexDocs published and redirects to package docs host",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "clojars",
+      "status": "verified",
+      "artifact_type": "maven_artifact",
+      "automation_level": "automated_with_token",
+      "package": "io.github.bbwdadfg/productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://clojars.org/io.github.bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "Clojars repo POM verified homepage and SCM links",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "docker_hub",
+      "status": "verified",
+      "artifact_type": "oci_image",
+      "automation_level": "automated_with_token_or_api",
+      "package": "baiwei111/productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://hub.docker.com/r/baiwei111/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "Docker Registry manifest verified schemaVersion 2, config digest, and layer count",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": [
+        "Used Docker Registry API with DoH --resolve fallback due local Docker Hub TLS failures"
+      ]
+    },
+    {
+      "platform": "jsr",
+      "status": "blocked_credentials",
+      "artifact_type": "typescript_package",
+      "automation_level": "automated_with_token",
+      "package": "@bbwdadfg/productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://jsr.io/@bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_token_exposed",
+      "blocked_reason": "JSR token exposed by CLI error output; do not reuse",
+      "verification": {
+        "method": "not_verified",
+        "result": "JSR CLI printed token on failure; token must be revoked and recreated before retry",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "status": "published",
+      "artifact_type": "java_library",
+      "automation_level": "semi_auto_signed",
+      "package": "io.github.bbwdadfg:productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://central.sonatype.com/artifact/io.github.bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "publish_api_accepted",
+        "result": "Central bundle uploaded, validated, and publish API returned HTTP 204; Central status API returned 500 and repo1/search indexing not visible yet",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": [
+        "deploymentId 1fa3d697-6c2d-4cdd-942c-1dc0ec0e0085"
+      ]
+    },
+    {
+      "platform": "nuget",
+      "status": "verified",
+      "artifact_type": "dotnet_package",
+      "automation_level": "automated_with_token",
+      "package": "ProductShotAI.SiteKit",
+      "version": "0.1.0",
+      "public_url": "https://www.nuget.org/packages/ProductShotAI.SiteKit/",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "NuGet flat-container API verified version 0.1.0",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "cocoapods",
+      "status": "blocked_credentials",
+      "artifact_type": "ios_macos_pod",
+      "automation_level": "semi_auto_with_trunk_auth",
+      "package": "ProductShotAISiteKit",
+      "version": "0.1.0",
+      "public_url": "https://cocoapods.org/pods/ProductShotAISiteKit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_token_available",
+      "blocked_reason": "full Xcode/simctl required for trunk validation",
+      "verification": {
+        "method": "not_verified",
+        "result": "Local pod trunk push blocked because full Xcode/simctl is unavailable",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "luarocks",
+      "status": "verified",
+      "artifact_type": "lua_module",
+      "automation_level": "automated_with_token",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0-1",
+      "public_url": "https://luarocks.org/modules/bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "LuaRocks module page verified version and homepage",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "cpan_metacpan",
+      "status": "blocked_credentials",
+      "artifact_type": "perl_distribution",
+      "automation_level": "automated_with_pause_account",
+      "package": "ProductShotAI-SiteKit",
+      "version": "0.1.0",
+      "public_url": "https://metacpan.org/release/ProductShotAI-SiteKit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "keychain_token_rejected",
+      "blocked_reason": "PAUSE user/token invalid or insufficient",
+      "verification": {
+        "method": "not_verified",
+        "result": "Clean CPAN tarball built; PAUSE upload returned 401 Unauthorized",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "hackage",
+      "status": "blocked_credentials",
+      "artifact_type": "haskell_package",
+      "automation_level": "automated_with_token",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://hackage.haskell.org/package/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "missing_keychain",
+      "blocked_reason": "missing publish-package-backlinks/hackage-token and cabal unavailable",
+      "verification": {
+        "method": "not_verified",
+        "result": "cabal CLI or Hackage token unavailable",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "chocolatey",
+      "status": "submitted",
+      "artifact_type": "windows_package",
+      "automation_level": "semi_auto_review",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://community.chocolatey.org/packages/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "not_verified",
+        "result": "Chocolatey page shows Pending with ProductShot AI and homepage link",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": [
+        "Awaiting Chocolatey moderation/validation"
+      ]
+    },
+    {
+      "platform": "github_packages",
+      "status": "verified",
+      "artifact_type": "github_package",
+      "automation_level": "automated_with_token",
+      "package": "@bbwdadfg/productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://github.com/users/bbwdadfg/packages/npm/package/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "GitHub npm package verified via npm view against npm.pkg.github.com",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "gitlab_packages",
+      "status": "verified",
+      "artifact_type": "gitlab_package",
+      "automation_level": "automated_with_token_or_ci",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://gitlab.com/baiwei.chu/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [
+        "README.md",
+        "package_metadata",
+        "repository"
+      ],
+      "credential_status": "keychain_token_used",
+      "blocked_reason": "",
+      "verification": {
+        "method": "public_api_or_registry_page",
+        "result": "GitLab API verified generic package and public project",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": [
+        "artifact sha256 6c4e2673416d7e28db627c24b5c6ed5a7baa93597262d894aab806e00c313932"
+      ]
+    },
+    {
+      "platform": "terraform_registry",
+      "status": "skipped_not_applicable",
+      "artifact_type": "terraform_module",
+      "automation_level": "semi_auto",
+      "package": "terraform-productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "no infrastructure module value",
+      "verification": {
+        "method": "not_verified",
+        "result": "No natural infrastructure module for this SaaS helper",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "helm_artifact_hub",
+      "status": "skipped_not_applicable",
+      "artifact_type": "helm_chart",
+      "automation_level": "semi_auto",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "no Kubernetes chart value",
+      "verification": {
+        "method": "not_verified",
+        "result": "No Kubernetes/self-hosted deployment artifact",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "ansible_galaxy",
+      "status": "skipped_not_applicable",
+      "artifact_type": "ansible_collection_or_role",
+      "automation_level": "automated_with_token",
+      "package": "productshotai.site_kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "missing_keychain",
+      "blocked_reason": "no automation role value",
+      "verification": {
+        "method": "not_verified",
+        "result": "No config-management use case; Ansible token also missing",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "open_vsx",
+      "status": "blocked_credentials",
+      "artifact_type": "vscode_compatible_extension",
+      "automation_level": "semi_auto_review",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://open-vsx.org/extension/bbwdadfg/productshotai-site-kit",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "missing_keychain",
+      "blocked_reason": "missing publish-package-backlinks/openvsx-token",
+      "verification": {
+        "method": "not_verified",
+        "result": "Could build a small command extension, but ovsx tool/token/publisher setup missing",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [
+        "temporary credential variables/configs cleared"
+      ],
+      "notes": []
+    },
+    {
+      "platform": "wordpress_plugin_directory",
+      "status": "blocked_review",
+      "artifact_type": "wordpress_plugin",
+      "automation_level": "manual_review",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "https://wordpress.org/plugins/productshotai-site-kit/",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "WordPress.org login/review/SVN approval required",
+      "verification": {
+        "method": "not_verified",
+        "result": "Would require a real shortcode/admin helper and WordPress.org plugin review",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "aur",
+      "status": "skipped_policy",
+      "artifact_type": "arch_package",
+      "automation_level": "manual_git_ssh",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "no real installable Arch utility",
+      "verification": {
+        "method": "not_verified",
+        "result": "No real Arch CLI or desktop app; backlink-only OS package would be misleading",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "conda_forge",
+      "status": "skipped_policy",
+      "artifact_type": "conda_recipe",
+      "automation_level": "pr_review",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "no scientific/Python conda value",
+      "verification": {
+        "method": "not_verified",
+        "result": "Generic site helper is not a meaningful conda-forge package",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "cran",
+      "status": "skipped_policy",
+      "artifact_type": "r_package",
+      "automation_level": "manual_review",
+      "package": "productshotai.sitekit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "no CRAN-suitable R package",
+      "verification": {
+        "method": "not_verified",
+        "result": "No real R utility exists",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "flathub",
+      "status": "skipped_policy",
+      "artifact_type": "desktop_app",
+      "automation_level": "pr_review",
+      "package": "app.productshotai.SiteKit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "ordinary website helper is not a Flathub app",
+      "verification": {
+        "method": "not_verified",
+        "result": "No desktop app exists",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    },
+    {
+      "platform": "homebrew",
+      "status": "skipped_policy",
+      "artifact_type": "formula_or_cask",
+      "automation_level": "pr_review",
+      "package": "productshotai-site-kit",
+      "version": "0.1.0",
+      "public_url": "",
+      "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
+      "link_surfaces_verified": [],
+      "credential_status": "none",
+      "blocked_reason": "website helper only",
+      "verification": {
+        "method": "not_verified",
+        "result": "No real CLI/app artifact exists for Homebrew",
+        "checked_at": "2026-06-20T05:23:31.960Z"
+      },
+      "cleanup": [],
+      "notes": []
+    }
+  ],
+  "follow_up": [
+    {
+      "platform": "jsr",
+      "reason": "Revoke exposed JSR token and create a fresh token before retrying publish",
+      "owner": "user"
+    },
+    {
+      "platform": "maven_central_javadoc",
+      "reason": "Retry Central status/repo1/search/javadoc verification after indexing; deployment publish API returned 204",
+      "owner": "agent_or_user"
+    },
+    {
+      "platform": "pkg_go_dev",
+      "reason": "Retry pkg.go.dev page after indexing; Go proxy already resolves v0.1.0",
+      "owner": "agent_or_user"
+    },
+    {
+      "platform": "cocoapods",
+      "reason": "Run pod trunk push from full Xcode or GitHub Actions macOS runner with COCOAPODS_TRUNK_TOKEN",
+      "owner": "user"
+    },
+    {
+      "platform": "cpan_metacpan",
+      "reason": "Replace PAUSE credential; current token returned 401",
+      "owner": "user"
+    },
+    {
+      "platform": "packagist",
+      "reason": "Add Packagist token or complete GitHub OAuth",
+      "owner": "user"
+    },
+    {
+      "platform": "chocolatey",
+      "reason": "Wait for moderation to leave Pending",
+      "owner": "platform"
+    }
+  ]
+}

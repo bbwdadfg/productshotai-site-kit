@@ -21,7 +21,7 @@
   "homepage": "https://productshotai.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bbwdadfg/productshotai-site-kit.git"
+    "url": "git+https://github.com/bbwdadfg/productshotai-site-kit.git"
   },
   "bugs": {
     "url": "https://github.com/bbwdadfg/productshotai-site-kit/issues"

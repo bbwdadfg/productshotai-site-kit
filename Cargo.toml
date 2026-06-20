@@ -8,6 +8,6 @@ repository = "https://github.com/bbwdadfg/productshotai-site-kit"
 documentation = "https://docs.rs/productshotai-site-kit"
 readme = "README.md"
 license = "MIT"
-keywords = ["product-photography", "ai-product-photography", "productshot"]
+keywords = ["product-photo", "ai-photo", "productshot"]
 categories = ["web-programming"]
 include = ["src/lib.rs", "Cargo.toml", "README.md", "LICENSE"]
