@@ -1,0 +1,75 @@
+#!/bin/sh
+set -eu
+
+site='https://productshotai.app'
+
+url_for() {
+  case "${1:-home}" in
+    home) printf '%s/\n' "$site" ;;
+    workbench) printf '%s/#workbench\n' "$site" ;;
+    pricing) printf '%s/#pricing\n' "$site" ;;
+    blog) printf '%s/blog/\n' "$site" ;;
+    about) printf '%s/about/\n' "$site" ;;
+    contact) printf '%s/contact/\n' "$site" ;;
+    privacy) printf '%s/privacy/\n' "$site" ;;
+    terms) printf '%s/terms/\n' "$site" ;;
+    refund-policy) printf '%s/refund-policy/\n' "$site" ;;
+    zh-home) printf '%s/zh/\n' "$site" ;;
+    *)
+      printf 'Unknown page: %s\n' "$1" >&2
+      return 64
+      ;;
+  esac
+}
+
+open_url() {
+  target="$1"
+  if command -v open >/dev/null 2>&1; then
+    open "$target"
+  elif command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$target"
+  else
+    printf '%s\n' "$target"
+  fi
+}
+
+case "${1:-help}" in
+  home|workbench|pricing|blog|about|contact|privacy|terms|refund-policy|zh-home)
+    url_for "$1"
+    ;;
+  metadata)
+    cat <<'EOF'
+name=ProductShot AI
+homepage=https://productshotai.app
+description=AI product photography generator for ecommerce sellers.
+EOF
+    ;;
+  open)
+    target="$(url_for "${2:-home}")"
+    open_url "$target"
+    ;;
+  help|--help|-h)
+    cat <<'EOF'
+Usage: productshotai-site-kit <command>
+
+Commands:
+  home            Print the ProductShot AI homepage URL
+  workbench       Print the ProductShot AI workbench URL
+  pricing         Print the pricing section URL
+  blog            Print the blog URL
+  about           Print the about page URL
+  contact         Print the contact page URL
+  privacy         Print the privacy page URL
+  terms           Print the terms page URL
+  refund-policy   Print the refund policy URL
+  zh-home         Print the Simplified Chinese homepage URL
+  metadata        Print basic public metadata
+  open [command]  Open a URL in the system browser, or print it on headless systems
+EOF
+    ;;
+  *)
+    printf 'Unknown command: %s\n\n' "$1" >&2
+    "$0" help >&2
+    exit 64
+    ;;
+esac

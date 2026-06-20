@@ -26,6 +26,14 @@ dart pub add productshotai_site_kit
 mix hex.install productshotai_site_kit
 ```
 
+CLI usage:
+
+```bash
+productshotai-site-kit home
+productshotai-site-kit workbench
+productshotai-site-kit metadata
+```
+
 Additional ecosystem manifests and helper sources are included for trial publishing on newer channels:
 
 - JSR: `jsr.json`, `mod.ts`
@@ -38,6 +46,7 @@ Additional ecosystem manifests and helper sources are included for trial publish
 - Chocolatey: `chocolatey/productshotai-site-kit.nuspec`
 - Open VSX: `open-vsx/`
 - WordPress Plugin Directory: `wordpress/productshotai-site-kit/`
+- Homebrew tap and AUR packaging: `packaging/`
 
 ## Usage
 

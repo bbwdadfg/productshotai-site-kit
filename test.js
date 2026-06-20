@@ -1,5 +1,7 @@
 'use strict';
 
+const { execFileSync } = require('child_process');
+
 const {
   BASE,
   BRAND,
@@ -46,6 +48,12 @@ assert(zhHomeUrl() === 'https://productshotai.app/zh/', 'zhHomeUrl');
 assert(localizedUrl('en', '/blog') === 'https://productshotai.app/blog/', 'English uses prefixless URLs');
 assert(localizedUrl('zh', '/blog') === 'https://productshotai.app/zh/blog/', 'Chinese uses /zh prefix');
 assert(localizedUrl('zh-CN', 'contact') === 'https://productshotai.app/zh/contact/', 'zh-CN aliases to /zh');
+
+const cli = './bin/productshotai-site-kit';
+assert(execFileSync(cli, ['home'], { encoding: 'utf8' }).trim() === homeUrl(), 'CLI home URL');
+assert(execFileSync(cli, ['workbench'], { encoding: 'utf8' }).trim() === workbenchUrl(), 'CLI workbench URL');
+assert(execFileSync(cli, ['zh-home'], { encoding: 'utf8' }).trim() === zhHomeUrl(), 'CLI zh home URL');
+assert(execFileSync(cli, ['metadata'], { encoding: 'utf8' }).includes('homepage=https://productshotai.app'), 'CLI metadata');
 
 try {
   localizedUrl('fr', '/blog');
