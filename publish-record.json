@@ -19,7 +19,7 @@
       "https://productshotai.app/zh/"
     ],
     "run_started_at": "2026-06-20T04:30:00Z",
-    "run_finished_at": "2026-06-20T05:23:31.960Z"
+    "run_finished_at": "2026-06-20T06:09:44Z"
   },
   "platforms": [
     {
@@ -86,8 +86,8 @@
       "blocked_reason": "missing publish-package-backlinks/packagist-token",
       "verification": {
         "method": "not_verified",
-        "result": "Packagist token/composer auth missing",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "result": "Composer metadata exists, but Packagist submission still blocked by missing publish-package-backlinks/packagist-token",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
@@ -315,14 +315,16 @@
       "credential_status": "keychain_token_exposed",
       "blocked_reason": "JSR token exposed by CLI error output; do not reuse",
       "verification": {
-        "method": "not_verified",
-        "result": "JSR CLI printed token on failure; token must be revoked and recreated before retry",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "dry_run_passed_credentials_blocked",
+        "result": "JSR dry-run passed with --allow-dirty; live publish still blocked until exposed token is revoked and replaced",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
-      "notes": []
+      "notes": [
+        "Do not reuse the existing Keychain JSR token unless it has been revoked and replaced"
+      ]
     },
     {
       "platform": "maven_central_javadoc",
@@ -380,25 +382,32 @@
     },
     {
       "platform": "cocoapods",
-      "status": "blocked_credentials",
+      "status": "verified",
       "artifact_type": "ios_macos_pod",
       "automation_level": "semi_auto_with_trunk_auth",
       "package": "ProductShotAISiteKit",
       "version": "0.1.0",
       "public_url": "https://cocoapods.org/pods/ProductShotAISiteKit",
       "repository_url": "https://github.com/bbwdadfg/productshotai-site-kit",
-      "link_surfaces_verified": [],
-      "credential_status": "keychain_token_available",
-      "blocked_reason": "full Xcode/simctl required for trunk validation",
+      "link_surfaces_verified": [
+        "package_metadata",
+        "homepage",
+        "repository",
+        "README.md"
+      ],
+      "credential_status": "github_actions_secret",
+      "blocked_reason": "",
       "verification": {
-        "method": "not_verified",
-        "result": "Local pod trunk push blocked because full Xcode/simctl is unavailable",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "public_registry_page_and_trunk_info",
+        "result": "GitHub Actions run 27862372191 published ProductShotAISiteKit 0.1.0; pod trunk info and CocoaPods page verified homepage and GitHub links",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [
-        "temporary credential variables/configs cleared"
+        "COCOAPODS_TRUNK_TOKEN stored as GitHub Actions secret; local command variables unset"
       ],
-      "notes": []
+      "notes": [
+        "Published through GitHub Actions because local macOS only has CommandLineTools and no simctl"
+      ]
     },
     {
       "platform": "luarocks",
@@ -439,14 +448,16 @@
       "credential_status": "keychain_token_rejected",
       "blocked_reason": "PAUSE user/token invalid or insufficient",
       "verification": {
-        "method": "not_verified",
-        "result": "Clean CPAN tarball built; PAUSE upload returned 401 Unauthorized",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "dry_run_passed_upload_rejected",
+        "result": "CPAN tarball now builds cleanly after MANIFEST fix; PAUSE upload still returned 401 Unauthorized",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
-      "notes": []
+      "notes": [
+        "MANIFEST now includes MANIFEST itself so MakeMaker can add META files during make dist"
+      ]
     },
     {
       "platform": "hackage",
@@ -462,8 +473,8 @@
       "blocked_reason": "missing publish-package-backlinks/hackage-token and cabal unavailable",
       "verification": {
         "method": "not_verified",
-        "result": "cabal CLI or Hackage token unavailable",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "result": "Hackage still blocked: missing publish-package-backlinks/hackage-token and cabal CLI unavailable",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
@@ -627,14 +638,16 @@
       "credential_status": "missing_keychain",
       "blocked_reason": "missing publish-package-backlinks/openvsx-token",
       "verification": {
-        "method": "not_verified",
-        "result": "Could build a small command extension, but ovsx tool/token/publisher setup missing",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "dry_run_passed",
+        "result": "Open VSX extension artifact prepared in open-vsx/; tests passed and VSIX packaged with @vscode/vsce",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [
         "temporary credential variables/configs cleared"
       ],
-      "notes": []
+      "notes": [
+        "Needs Open VSX publisher namespace and publish-package-backlinks/openvsx-token before live ovsx publish"
+      ]
     },
     {
       "platform": "wordpress_plugin_directory",
@@ -649,12 +662,14 @@
       "credential_status": "none",
       "blocked_reason": "WordPress.org login/review/SVN approval required",
       "verification": {
-        "method": "not_verified",
-        "result": "Would require a real shortcode/admin helper and WordPress.org plugin review",
-        "checked_at": "2026-06-20T05:23:31.960Z"
+        "method": "artifact_prepared",
+        "result": "WordPress shortcode plugin prepared under wordpress/productshotai-site-kit and zipped at /tmp/productshotai-site-kit-wordpress.zip for review submission",
+        "checked_at": "2026-06-20T06:09:44Z"
       },
       "cleanup": [],
-      "notes": []
+      "notes": [
+        "Requires WordPress.org plugin review and SVN access after approval"
+      ]
     },
     {
       "platform": "aur",
@@ -760,7 +775,7 @@
   "follow_up": [
     {
       "platform": "jsr",
-      "reason": "Revoke exposed JSR token and create a fresh token before retrying publish",
+      "reason": "Revoke exposed JSR token, create a fresh token, and store it in publish-package-backlinks/jsr-token",
       "owner": "user"
     },
     {
@@ -774,24 +789,34 @@
       "owner": "agent_or_user"
     },
     {
-      "platform": "cocoapods",
-      "reason": "Run pod trunk push from full Xcode or GitHub Actions macOS runner with COCOAPODS_TRUNK_TOKEN",
-      "owner": "user"
-    },
-    {
       "platform": "cpan_metacpan",
-      "reason": "Replace PAUSE credential; current token returned 401",
+      "reason": "Replace PAUSE user/token; current Keychain credential still returns 401",
       "owner": "user"
     },
     {
       "platform": "packagist",
-      "reason": "Add Packagist token or complete GitHub OAuth",
+      "reason": "Add Packagist API token or complete Packagist GitHub OAuth",
       "owner": "user"
     },
     {
       "platform": "chocolatey",
       "reason": "Wait for moderation to leave Pending",
       "owner": "platform"
+    },
+    {
+      "platform": "hackage",
+      "reason": "Install cabal and add publish-package-backlinks/hackage-token",
+      "owner": "user"
+    },
+    {
+      "platform": "open_vsx",
+      "reason": "Create/verify Open VSX publisher namespace bbwdadfg and add publish-package-backlinks/openvsx-token",
+      "owner": "user"
+    },
+    {
+      "platform": "wordpress_plugin_directory",
+      "reason": "Submit /tmp/productshotai-site-kit-wordpress.zip in WordPress.org plugin review flow",
+      "owner": "user"
     }
   ]
 }
